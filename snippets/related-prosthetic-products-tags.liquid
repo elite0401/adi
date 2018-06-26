@@ -1,0 +1,104 @@
+{% comment %}
+  Number of related items per row,
+  and number of rows.
+{% endcomment %}
+
+{% assign number_of_related_products_per_row = 5 %}
+{% assign number_of_rows = 1 %}
+
+{% comment %}
+  Heading.
+  Leave blank if you don't need one.
+{% endcomment %}
+
+{% assign heading = 'Related Prosthetic Products' %}
+
+
+{% comment %}
+  Looking for a relevant collection.
+{% endcomment %}
+
+
+{% assign collection_type = 'green' %}
+
+	{% for tag in product.tags %}
+		{% if tag contains "green" %}
+			{% assign collection_type = 'green' %}
+		{% elsif tag contains "red" %}
+			{% assign collection_type = 'purple' %}
+		{% elsif tag contains "new" %}
+			{% assign collection_type = 'gold' %}
+		{% endif %}
+	{% endfor %}
+
+
+  <aside class="grid">
+    <div class="grid__item">
+      {% unless heading == blank %}
+      <header class="section-header">
+        <h2 class="section-header__title">{{ heading }}</h1>
+      </header>
+      {% endunless %}
+      <div class="grid-uniform related-prosthetic-items">
+          
+          <div class="grid-item large--one-fifth medium--one-third small--one-half">
+
+            <a href="/collections/tissue-healing-abutments" class="product-grid-item">
+              <div class="product-grid-image">
+                <div class="product-grid-image--centered">
+                  	{% if collection_type contains "green" %}
+                  		<img src="//cdn.shopify.com/s/files/1/0866/5944/files/ad94403th3503.jpg?11475273123803103418" alt="Green Implants">
+                  	{% elsif collection_type contains "purple" %}
+                  		<img src="//cdn.shopify.com/s/files/1/0866/5944/files/ad945_3th4503.jpg?11475273123803103418" alt="Purple">
+                  	{% elsif collection_type contains "gold" %}
+                  		<img src="//cdn.shopify.com/s/files/1/0866/5944/files/ad1168_3th576503.jpg?11475273123803103418" alt="Gold">
+                  	{% endif %}
+                </div>
+              </div>           
+                <div class="text-center">Tissue Healing<br/>Abutments</div>
+            </a>
+          </div>
+
+          <div class="grid-item large--one-fifth medium--one-third small--one-half">
+
+            <a href="/collections/cement-on-abutments" class="product-grid-item">
+              <div class="product-grid-image">
+                <div class="product-grid-image--centered">
+                  	{% if collection_type contains "green" %}
+                  		<img src="//cdn.shopify.com/s/files/1/0866/5944/files/cement_on_abutment.jpg?7150933461169271372" alt="Green Implants">
+                  	{% elsif collection_type contains "purple" %}
+                  		<img src="//cdn.shopify.com/s/files/1/0866/5944/files/purple_cement_on_abutment.jpg?7150933461169271372" alt="Purple">
+                  	{% elsif collection_type contains "gold" %}
+                  		<img src="//cdn.shopify.com/s/files/1/0866/5944/files/AD828_with_the_gold_fixation_screw.jpg?9522967497635741028" alt="Gold">
+                  	{% endif %}
+                </div>
+              </div>           
+                <div class="text-center">Cement On<br/>Abutments</div>
+            </a>
+          </div>
+
+          <div class="grid-item large--one-fifth medium--one-third small--one-half">
+            <a href="/collections/denture-retention-systems" class="product-grid-item">
+              <div class="product-grid-image">
+                <div class="product-grid-image--centered">
+                  	{% if collection_type contains "green" %}
+                  		<img src="//cdn.shopify.com/s/files/1/0866/5944/files/o_ring_system_abutment_green.jpg?10110516197868264469" alt="Green Implants">
+                  	{% elsif collection_type contains "purple" %}
+                  		<img src="//cdn.shopify.com/s/files/1/0866/5944/files/o_ring_system_abutment_purple.jpg?10110516197868264469" alt="Purple">
+                  	{% elsif collection_type contains "gold" %}
+<!--                   		<img src="//cdn.shopify.com/s/files/1/0866/5944/files/AD828_with_the_gold_fixation_screw.jpg?9522967497635741028" alt="Gold"> -->
+                  	{% endif %}
+                </div>
+              </div>
+              	{% if collection_type contains "green" or collection_type contains "purple" %}
+                	<div class="text-center">Denture Retention<br/>Systems</div>
+              	{% endif %}
+            </a>
+          </div>        
+        
+        
+      </div>
+    </div>
+  </aside>
+
+ 

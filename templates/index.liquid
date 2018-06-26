@@ -1,0 +1,230 @@
+{% paginate collections['all'].products by 100 %}
+
+
+{% assign number_of_index_sections = 0 %}
+
+{% unless settings.home_section_1 == blank %}
+  {% assign number_of_index_sections = number_of_index_sections | plus: 1 %}
+  {% include settings.home_section_1 %}
+{% endunless %}
+
+<h1 style="text-align:center;">Dental Implants</h1>
+
+<h2 style="text-align: center;">The Greater Taper Series</h2>
+<div class="grid">
+  {% for product in collections['the-greater-taper-series'].products %}
+  <div class="grid-item large--one-quarter medium--one-half">
+    <a href="{{ product.url }}" class="product-grid-item">
+      <div class="product-grid-image">
+        <div class="product-grid-image--centered">
+          <img src="{{ product.featured_image | img_url: "medium" }}" alt="{{ product.title }}">
+        </div>
+      </div>
+      <p class="text-center">{{ product.title }}</p>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+
+{% assign green_count = 0 %}
+{% assign red_count = 0 %}
+{% assign gold_count = 0 %}
+<h2 style="text-align: center;">Straight Wall and Taper Series</h2>
+<div class="grid">
+  
+  {% for product in collections.all.products  %}
+  	{% for tag in product.tags %}
+
+  	{% if tag contains 'green' %}
+  	  <div class="grid-item large--one-quarter medium--one-half">
+
+        <a href="{{ product.url }}" class="product-grid-item">
+          <div class="product-grid-image">
+            <div class="product-grid-image--centered">
+
+              <img src="{{ product.featured_image | img_url: "medium" }}" alt="{{ product.title }}">
+            </div>
+            
+          </div>
+
+          <p class="text-center">{{ product.title }}</p>
+
+
+        </a>
+		
+      </div>
+		{% assign green_count = green_count | plus: 1 %}
+  		
+      {% endif %}
+  
+      {% if count == 4 %}
+    	  {% break %}
+      {% endif %}
+  	{% endfor %}
+  {% endfor %}
+</div>
+
+<div class="grid">
+  
+  {% for product in collections.all.products  %}
+  	{% for tag in product.tags %}
+
+  	{% if tag contains 'red' %}
+  	  <div class="grid-item large--one-quarter medium--one-half">
+
+        <a href="{{ product.url }}" class="product-grid-item">
+          <div class="product-grid-image">
+            <div class="product-grid-image--centered">
+
+              <img src="{{ product.featured_image | img_url: "medium" }}" alt="{{ product.title }}">
+            </div>
+            
+          </div>
+
+          <p class="text-center">{{ product.title }}</p>
+
+
+        </a>
+		
+      </div>
+		{% assign red_count = red_count | plus: 1 %}
+  		
+      {% endif %}
+  
+      {% if red_count == 4 %}
+    	  {% break %}
+      {% endif %}
+  	{% endfor %}
+  {% endfor %}
+</div>
+
+<div class="grid">
+
+  
+ {% for product in collections['all'].products  %}
+  	{% for tag in product.tags %}
+
+  	{% if tag contains 'gold_new' %}
+  	  <div class="grid-item large--one-quarter medium--one-half">
+
+        <a href="{{ product.url }}" class="product-grid-item">
+          <div class="product-grid-image">
+            <div class="product-grid-image--centered">
+
+              <img src="{{ product.featured_image | img_url: "medium" }}" alt="{{ product.title }}">
+            </div>
+            
+          </div>
+
+          <p class="text-center">{{ product.title }}</p>
+
+
+        </a>
+		
+      </div>
+		{% assign gold_count = gold_count | plus: 1 %}
+  		
+      {% endif %}
+  
+      {% if gold_count == 4 %}
+    	  {% break %}
+      {% endif %}
+  	{% endfor %}
+  {% endfor %}
+</div>
+
+<div class="grid">
+	<div class="grid-item large--one-whole medium--one-whole small--one-whole">
+      <div class="image_section">
+<!--         <img src="https://cdn.shopify.com/s/files/1/0866/5944/files/kit-6Front.jpg?13438366642137154108"> -->
+        <img src="https://cdn.shopify.com/s/files/1/0866/5944/files/ADI8-5x11SS7DS4.png?4154447896694283182">
+      </div>
+  </div>
+</div>  
+
+<div class="grid">
+	<div class="grid-item large--one-half medium--one-half small--one-whole">
+      <div class="image_section">
+        {% if settings.left_image != blank  %}
+         <img src="{{ settings.left_image | img_url: 'large' }}">
+        {% else %}
+  		   {{ 'image' | placeholder_svg_tag: 'icon icon--placeholder' }}
+      	{% endif %}
+      </div>
+  </div>
+  
+  <div class="grid-item large--one-half medium--one-half small--one-whole">
+    <div class="image_section">
+        {% if settings.right_image != blank  %}
+        <img src="{{ settings.right_image | img_url: 'large' }}">
+        {% else %}
+  		   {{ 'image' | placeholder_svg_tag: 'icon icon--placeholder' }}
+      	{% endif %}
+    </div>
+  </div>
+	
+</div>
+
+
+<div class="grid">
+  <div class="grid-item large--one-third medium--one-half small-one-whole text-center">
+    <iframe src="https://player.vimeo.com/video/171624166" width="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <p><a href="https://vimeo.com/171624166">Replacing a Maxillary Central Incisor with the Skinny 2.4</a> from <a href="https://vimeo.com/adicorp">American Dental Implant Corp.</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+  </div>  
+  <div class="grid-item large--one-third medium--one-half small-one-whole text-center">
+    <iframe src="https://player.vimeo.com/video/174829403" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <p><a href="https://vimeo.com/174829403">Using the Skinny 2.4 to Replace Congenitally Missing Lateral Incisors</a> from <a href="https://vimeo.com/adicorp">American Dental Implant Corp.</a> on <a href="https://vimeo.com">Vimeo</a>.</p> 
+  </div>
+  <div class="grid-item large--one-third medium--one-half small-one-whole text-center">
+  	<iframe src="https://player.vimeo.com/video/192009029" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>    <p><a href="https://vimeo.com/192009029">Using the Skinny 2.4 to Replace a Maxillary Central Incisor (with bone defect)</a> from <a href="https://vimeo.com/adicorp">American Dental Implant Corp.</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+  </div>
+  <div class="grid-item large--one-third medium--one-half small-one-whole text-center">
+   <iframe src="https://player.vimeo.com/video/180055695" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+    <p><a href="https://vimeo.com/180055695">The Surgical Placement of the Skinny 2.4 Replacing Tooth Number 5</a> from <a href="https://vimeo.com/adicorp">American Dental Implant Corp.</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+  </div>
+   <div class="grid-item large--one-third medium--one-half small-one-whole text-center">
+  	<iframe src="https://player.vimeo.com/video/192624915" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+	<p><a href="https://vimeo.com/192624915">The bone compression technique replacing a maxillary bicuspid</a> from <a href="https://vimeo.com/adicorp">American Dental Implant Corp.</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+  </div>
+    <div class="grid-item large--one-third medium--one-half small-one-whole text-center">
+    <iframe src="https://player.vimeo.com/video/190720002" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/190720002">Scanning Electron Micrography of the surface of the American Dental Implant</a> from <a href="https://vimeo.com/adicorp">American Dental Implant Corp.</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+  </div>
+</div>
+<hr />
+<h2 style="text-align:center;">Browse Products</h2>
+<div>
+  
+  <p style="text-align:center;">
+{% for tag in collections.all.tags %}
+    <span class="hometag"><a title="Tag {{ tag }}" href="/collections/all/{{ tag | handle }}">{{ tag }}</a></span> 
+    
+{% endfor %}
+  </p>
+</div>
+
+{% unless settings.home_section_2 == blank %}
+  {% unless number_of_index_sections == 0 %}
+  <hr>
+  {% endunless %}
+  {% assign number_of_index_sections = number_of_index_sections | plus: 1 %}
+  {% include settings.home_section_2 %}
+{% endunless %}
+
+{% unless settings.home_section_3 == blank %}
+  {% unless number_of_index_sections == 0 %}
+  <hr>
+  {% endunless %}
+  {% assign number_of_index_sections = number_of_index_sections | plus: 1 %}
+  {% include settings.home_section_3 %}
+{% endunless %}
+
+{% unless settings.home_section_4 == blank %}
+  {% unless number_of_index_sections == 0 %}
+  <hr>
+  {% endunless %}
+  {% assign number_of_index_sections = number_of_index_sections | plus: 1 %}
+  {% include settings.home_section_4 %}
+{% endunless %}
+
+{% endpaginate %}

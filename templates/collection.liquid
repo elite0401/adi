@@ -1,0 +1,105 @@
+{% paginate collection.products by 20 %}
+
+{% include 'breadcrumb' %}
+
+{% assign has_sidebar = false %}
+{% if collection.all_tags.size > 0 %}
+  {% assign has_sidebar = true %}
+{% endif %}
+
+<div class="grid grid-border">
+
+  {% if has_sidebar %}
+  <aside class="sidebar grid-item large--one-fifth collection-filters" id="collectionFilters">
+    {% include 'collection-sidebar' %}
+  </aside>
+  {% endif %}
+
+  <div class="grid-item{% if has_sidebar %} large--four-fifths grid-border--left{% endif %}">
+
+    {% comment %}
+      Different markup if description is set
+    {% endcomment %}
+    {% if collection.description != blank %}
+      <header class="section-header">
+        <h1 class="section-header--title">{{ collection.title }}</h1>
+        <div class="rte rte--header">
+          {{ collection.description }}
+        </div>
+      </header>
+      <hr{% if has_sidebar %} class="hr--offset-left"{% endif %}>
+      <div class="section-header">
+        <div class="section-header--right">
+          {% include 'collection-sorting' %}
+          {% include 'collection-views' %}
+          {% include 'toggle-filters' %}
+        </div>
+      </div>
+    {% else %}
+    <header class="section-header">
+      <h1 class="section-header--title section-header--left">{% if current_tags %}{{ current_tags }}{% else %}{{ collection.title }}{% endif %}</h1>
+      <div class="section-header--right">
+        {% include 'collection-sorting' %}
+        {% include 'collection-views' %}
+        {% include 'toggle-filters' %}
+      </div>
+    </header>
+    {% endif %}
+
+
+    {% if current_tags and current_tags contains "Drills" %}
+      <div class="collection-drills-img"><img src="//cdn.shopify.com/s/files/1/0866/5944/files/bone_drills_series_long.jpg?2220755831384231623" /></div>
+      <div class="collection-drills-img"><img src="//cdn.shopify.com/s/files/1/0866/5944/files/bone_drill_series_short.jpg?2220755831384231623" /></div>
+    {% endif %}
+
+       
+    <div class="grid-uniform">
+      
+
+      {% for product in collection.products %}
+        
+        {% if has_sidebar %}
+          {% assign grid_item_width = 'large--one-quarter medium--one-third small--one-half' %}
+        {% else %}
+          {% assign grid_item_width = 'large--one-fifth medium--one-third small--one-half' %}
+        {% endif %}
+        {% include 'product-grid-item' %}
+
+      {% else %}
+
+        <div class="grid-item">
+          <p>{{ 'collections.general.no_matches' | t }}</p>
+        </div>
+
+      {% endfor %}
+
+    </div>
+
+    {% if current_tags and current_tags contains "Drills" %}
+      <video width="800" height="600" class="video-js" id="product_video" controls preload="auto" data-setup="{}">
+        <source src="{{ '3.8animation.mp4' | asset_url }}" type="video/mp4">
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to a web browser that
+          <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+      </video>
+      <h2 class="text-center">Virtual image of the 3.8 mm Diameter AD Twist Drill</h2>
+    {% endif %}
+
+  </div>
+
+  {% if paginate.pages > 1 %}
+  <div class="grid-item pagination-border-top">
+    <div class="grid">
+      <div class="grid-item{% if has_sidebar %} large--four-fifths push--large--one-fifth{% endif %}">
+          <div class="text-center">
+            {% include 'pagination-custom' %}
+          </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+</div>
+
+{% endpaginate %}

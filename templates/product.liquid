@@ -1,0 +1,469 @@
+{% include 'breadcrumb' %}
+
+<div class="grid" itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+  <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
+
+  <div class="grid-item large--two-fifths">
+    <div class="grid">
+      <div class="grid-item large--eleven-twelfths text-center">
+        <div class="product-photo-container" id="productPhoto">
+          {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
+          <img id="productPhotoImg" src="{{ featured_image | img_url: 'large' }}" alt="{{ featured_image.alt | escape }}" {% if settings.product_image_zoom_enable %} data-zoom="{{ featured_image | img_url: '1024x1024' }}"{% endif %}>
+          
+        </div>
+
+           
+        <!-- Product ID -->
+		<!-- 2.4 SKINNY=546164931, 3.0 GT=179302858777, 3.5 GT=179302957081, 3.3 Straight=4842146630, 3.7 Straight=4842152454, 3.7 Tapper=4842179526 -->
+<!-- 		{{ product.id }} -->
+        
+        {% if product.images.size > 1 %}
+          <ul class="product-photo-thumbs grid-uniform" id="productThumbs">
+
+			<!--             
+			{% for image in product.images %}
+              <li class="grid-item medium-down--one-quarter large--one-quarter">
+                <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
+                  <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+                </a>
+              </li>
+            {% endfor %} 
+			-->
+            
+            {% for image in product.images %}
+            	{% if product.id == 4842146630 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 or product.id == 4842152454 or product.id == 4842259078 %}
+            		<!-- 3.3 STRAIGHT WAL , 3.7 Tapper, 4.7 straight wal, 4.7 Taper, 3.7 Straight, 5.7XL Taper -->
+            		{% if forloop.first == true %}
+                      <li class="grid-item medium-down--one-fifth large--one-fifth">
+                        <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
+                          <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+                        </a>                        
+                      </li>
+                      <li class="grid-item medium-down--one-fifth large--one-fifth">
+                      </li>
+                      <li class="grid-item medium-down--one-fifth large--one-fifth">
+                      </li>
+                      <li class="grid-item medium-down--one-fifth large--one-fifth">
+                      </li>
+                      <li class="grid-item medium-down--one-fifth large--one-fifth">
+                      </li>
+            
+            		{% else %}
+                      <li class="grid-item medium-down--one-fifth large--one-fifth">
+                        <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
+                          <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+                        </a>
+                        {% for variant in image.variants %}
+                        <div>{{ variant.title }}</div>
+                        {% endfor %}
+                      </li>
+            		{% endif %}
+            	{% elsif product.id == 179302957081 or product.id == 179304955929 or product.id == 179303186457 or product.id == 210239782937 or product.id == 210240503833 %}
+            		<!-- 3.5GT=179302957081, 4.5GT=179303186457, 5.7GT=179304955929, ORS45, ORS35 -->
+            		{% if forloop.first == false %}
+                      <li class="grid-item medium-down--one-fifth large--one-fifth">
+                        <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
+                          <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+                        </a>
+                      </li>
+            		{% endif %}
+            	{% elsif product.id == 546164931 %}
+            		<!-- 2.4 SKINNY -->
+            		  {% if forloop.index == 2 %}
+                        <li class="grid-item medium-down--one-quarter large--one-quarter">
+                        </li>
+                        <li class="grid-item medium-down--one-quarter large--one-quarter">
+                        </li>
+                        <li class="grid-item medium-down--one-quarter large--one-quarter">
+                        </li>
+            			
+            		  {% endif %}	
+                      <li class="grid-item medium-down--one-quarter large--one-quarter">
+                        <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
+                          <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+                        </a>
+                      </li>
+            		
+            	{% else %}
+            		
+                  <li class="grid-item medium-down--one-quarter large--one-quarter">
+                    <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
+                      <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+                    </a>
+                  </li>
+            	{% endif %}
+            {% endfor %}
+            
+
+          </ul>
+        {% endif %}
+
+      </div>
+    </div>
+
+    
+
+  </div>
+
+  <div class="grid-item large--three-fifths">
+
+    <h2 itemprop="name">{{ product.title }}</h2>
+
+    {% if settings.product_vendor_enable %}
+      <p class="product-meta" itemprop="brand">{{ product.vendor }}</p>
+    {% endif %}
+
+    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
+      {% assign variant = product.selected_or_first_available_variant %}
+
+      <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+      <meta itemprop="price" content="{{ variant.price | money_without_currency }}">
+
+      <ul class="inline-list product-meta">
+        <li>
+          <span id="productPrice" class="h1">
+            {% include 'price' with variant.price %}
+          </span>
+        </li>
+        {% if product.compare_at_price_max > product.price and settings.product_show_saved_amount %}
+        <li>
+          <span id="comparePrice" class="sale-tag large">
+            {% assign compare_price = variant.compare_at_price %}
+            {% assign product_price = variant.price %}
+            {% include 'price-sale' %}
+          </span>
+        </li>
+        {% endif %}
+        {% if settings.product_reviews_enable %}
+          <li class="product-meta--review">
+            <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+          </li>
+        {% endif %}
+      </ul>
+
+      <hr id="variantBreak" class="hr--clear hr--small">
+
+      <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
+
+      <form action="/cart/add" method="post" enctype="multipart/form-data" id="addToCartForm">
+        <select name="id" id="productSelect" class="product-variants">
+          {% for variant in product.variants %}
+            {% if variant.available %}
+
+              <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" data-selected-name="{{ variant.title }}" value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money_with_currency }}</option>
+
+            {% else %}
+              <option disabled="disabled">
+                {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+              </option>
+            {% endif %}
+          {% endfor %}
+        </select>
+
+        {% if settings.product_quantity_enable %}
+          <label for="quantity" class="quantity-selector">{{ 'products.product.quantity' | t }}</label>
+          <input type="number" id="quantity" name="quantity" value="1" min="1" class="quantity-selector">
+        {% endif %}
+
+        <button type="submit" name="add" id="addToCart" class="btn">
+          <span class="icon icon-cart"></span>
+          <span id="addToCartText">{{ 'products.product.add_to_cart' | t }}</span>
+        </button>
+        {% if settings.product_quantity_message %}
+          <span id="variantQuantity" class="variant-quantity"></span>
+        {% endif %}
+      </form>
+
+      <hr>
+
+    </div>
+
+    <div class="product-description rte" itemprop="description">
+      {{ product.description }}
+    </div>
+
+    {% if settings.social_sharing_products %}
+      {% include 'social-sharing' %}
+    {% endif %}
+    
+    {% if product.handle == 'cement-on-abutments' or product.handle == 'wide-diameter-cement-on-abutments' or product.handle == 'xl-diameter-cement-on-abutments' %}
+    <div class="product-features">
+      <h4>Features:</h4>
+      <p>All cement retained abutments are custom prepable.<br>
+      All abutments include titanium fixation screw.<br>
+      All prosthetic components are universally compatible with the original internal hex implant.<br>
+      All abutments are utilized with the internal hex restorative platform.<br>
+      Analogs are machined from 17/4 surgical grade stainless steel for durability and reuse.</p>
+    </div>
+    {% endif %}
+
+  </div>
+</div>
+
+
+<!--  Dalla Bona / O-Ring Abutment Driver -->
+{% if product.id == 6275381958 %}
+    <div style="margin-top: 10px; border-top: solid 1px #eeeeee;">
+        <img style="width: 100%;" alt="" src="//cdn.shopify.com/s/files/1/0866/5944/files/DBORD_with_finger_driver_image.jpg?18442863205243767642" />
+    </div>
+{% endif %}
+
+{% if product.id == 179302858777 %}
+  <div style="margin-top: 20px;">
+    <img style="width: 100%;" alt="" src="{{ '3.2_implant_cutaway_view.jpg' | asset_url }}" />
+  </div>
+{% endif %}
+
+<!-- 2.4 SKINNY, 3.0 GT, 3.5 GT, 3.3 Straight, 3.7 Straight, 3.7 Tapper -->
+{% if product.id == 546164931 or product.id == 179302858777 or product.id == 179302957081 or product.id == 4842146630 or product.id == 4842152454 or product.id == 4842179526 %}
+    <div style="margin-top: 20px; border: solid 1px #eeeeee;">
+        <img style="width: 100%;" alt="" src="//cdn.shopify.com/s/files/1/0866/5944/files/Vial_image_for_web_from_Dante_and_me_from_Tuesday_12_26_2017_composite.43_3Dweb_another.jpg?17842084663508152835" />
+    </div>
+{% endif %}
+
+<!-- 4.5 GT, 4.7 Straight, 4.7 Tapper -->
+{% if product.id == 179303186457 or product.id == 4842228870 or product.id == 4842243270 %}
+    <div style="margin-top: 20px; border: solid 1px #eeeeee;">
+        <img style="width: 100%;" alt="" src="//cdn.shopify.com/s/files/1/0866/5944/files/composite.43purple.jpg?13741398045874273691" />
+    </div>
+{% endif %}
+
+<!-- 5.7 GT, 5.7 XL Tapper -->
+{% if product.id == 179304955929 or product.id == 4842259078 %}
+    <div style="margin-top: 20px; border: solid 1px #eeeeee;">
+        <img style="width: 100%;" alt="" src="//cdn.shopify.com/s/files/1/0866/5944/files/composite.43Gold.jpg?13741398045874273691" />
+    </div>
+{% endif %}
+
+
+{% if product.id == 4842146630 %}
+  <!-- 3.3 Straight Wall -->
+  <br/><br/>
+  <div>
+      <span style="color: #000000;">
+      <strong>
+        <a href="#">
+          <img style="width: 100%;" alt="" src="//cdn.shopify.com/s/files/1/0866/5944/files/DrillSeqWeb3-3.jpg?4799052012135754301" />
+        </a>
+      </strong>
+      </span>
+  </div>
+{% endif %}
+
+
+{% if product.id == 4842152454 %}
+  <!-- 3.7 Straight Wall -->
+  <br/><br/>
+  <div>
+      <span style="color: #000000;">
+      <strong>
+        <a href="#">
+          <img style="width: 100%;" alt="" src="//cdn.shopify.com/s/files/1/0866/5944/files/DrillSeqWeb3-7.jpg?4799052012135754301" />
+        </a>
+      </strong>
+      </span>
+  </div>
+{% endif %}
+
+{% if product.id == 4842179526 %}
+  <!-- 3.7 Taper -->
+  <br/><br/>
+  <div>
+      <span style="color: #000000;">
+      <strong>
+        <a href="#">
+          <img style="width: 100%;" alt="" src="//cdn.shopify.com/s/files/1/0866/5944/files/DrillSeqWeb3-7T.jpg?4799052012135754301" />
+        </a>
+      </strong>
+      </span>
+  </div>
+{% endif %}
+
+{% if product.id == 4842228870 %}
+  <!-- 4.7 Straight Wall -->
+  <br/><br/>
+  <div>
+      <span style="color: #000000;">
+      <strong>
+        <a href="#">
+          <img style="width: 100%;" alt="" src="//cdn.shopify.com/s/files/1/0866/5944/files/DrillSeqWeb4-7.jpg?4799052012135754301" />
+        </a>
+      </strong>
+      </span>
+  </div>
+{% endif %}
+
+{% if product.id == 4842243270 %}
+  <!-- 4.7 Taper -->
+  <br/><br/>
+  <div>
+      <span style="color: #000000;">
+      <strong>
+        <a href="#">
+          <img style="width: 100%;" alt="" src="//cdn.shopify.com/s/files/1/0866/5944/files/DrillSeqWeb4-7T.jpg?4799052012135754301" />
+        </a>
+      </strong>
+      </span>
+  </div>
+{% endif %}
+
+{% if product.id == 4842259078 %}
+  <!-- 5.7 XL TAPER -->
+  <br/><br/>
+  <div>
+      <span style="color: #000000;">
+      <strong>
+        <a href="http://shop.americandentalimplant.com/products/copy-of-straight-final-sizing-twist-drills">
+          <img style="width: 100%;" alt="" src="//cdn.shopify.com/s/files/1/0866/5944/files/XL5.7_Taper_Implant.jpg?5065767944708113729" />
+        </a>
+      </strong>
+      </span>
+  </div>
+{% endif %}  
+
+<!-- 
+{% if settings.related_products_enable %}
+  {% assign grid_item_width = 'large--one-fifth medium--one-third small--one-half' %}
+  {% include 'related-products' %}
+{% endif %}
+
+{% if settings.product_reviews_enable %}
+  <hr>
+  <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
+{% endif %}
+ -->
+
+
+{{ 'option_selection.js' | shopify_asset_url | script_tag }}
+
+
+<script>
+
+  // Pre-loading product images, to avoid a lag when a thumbnail is clicked, or
+  // when a variant is selected that has a variant image.
+  Shopify.Image.preload({{ product.images | json }}, 'large');
+
+  var selectCallback = function(variant, selector) {
+
+    var $addToCart = $('#addToCart'),
+        $productPrice = $('#productPrice'),
+        $comparePrice = $('#comparePrice'),
+        $variantQuantity = $('#variantQuantity'),
+        $quantityElements = $('.quantity-selector, label + .js-qty'),
+        $addToCartText = $('#addToCartText'),
+        $featuredImage = $('#productPhotoImg');
+
+    if (variant) {
+      // Update variant image, if one is set
+      // Call timber.switchImage function in shop.js
+      if (variant.featured_image) {
+        var newImg = variant.featured_image,
+            el = $featuredImage[0];
+        $(function() {
+          Shopify.Image.switchImage(newImg, el, timber.switchImage);
+        });
+      }
+
+      // Select a valid variant if available
+      if (variant.available) {
+        // We have a valid product variant, so enable the submit button
+        $addToCart.removeClass('disabled').prop('disabled', false);
+        $addToCartText.html({{ 'products.product.add_to_cart' | t | json }});
+
+        // Show how many items are left, if below 10
+        {% if settings.product_quantity_message %}
+        if (variant.inventory_management) {
+          if (variant.inventory_quantity < 10 && variant.inventory_quantity > 0) {
+            $variantQuantity.html({{ 'products.product.only_left' | t: count: '1' | json }}.replace('1', variant.inventory_quantity)).addClass('is-visible');
+          } else {
+            $variantQuantity.removeClass('is-visible');
+          }
+        }
+        else {
+          $variantQuantity.removeClass('is-visible');
+        }
+        {% endif %}
+
+
+        $quantityElements.show();
+      } else {
+        // Variant is sold out, disable the submit button
+        $addToCart.addClass('disabled').prop('disabled', true);
+        $addToCartText.html({{ 'products.product.sold_out' | t | json }});
+        $variantQuantity.removeClass('is-visible');
+        $quantityElements.hide();
+      }
+
+      // Regardless of stock, update the product price
+      var customPriceFormat = timber.formatMoney( Shopify.formatMoney(variant.price, "{{ shop.money_format }}") );
+      {% if settings.product_show_compare_at_price %}
+        if (variant.compare_at_price > variant.price) {
+          customPriceFormat += ' <small><s>' + timber.formatMoney(Shopify.formatMoney(variant.compare_at_price, "{{ shop.money_format }}")) + '</s></small>';
+        }
+      {% endif %}
+      $productPrice.html(customPriceFormat);
+
+      // Also update and show the product's compare price if necessary
+      if ( variant.compare_at_price > variant.price ) {
+        var priceSaving = timber.formatSaleTag( Shopify.formatMoney(variant.compare_at_price - variant.price, "{{ shop.money_format }}") );
+        {% comment %}
+        priceSaving += ' (' + ( (variant.compare_at_price - variant.price)*100/(variant.compare_at_price) ).toFixed(0) + '%)';
+        {% endcomment %}
+        $comparePrice.html({{ 'products.general.save_html' | t: saved_amount: '[$]' | json }}.replace('[$]', priceSaving)).show();
+      } else {
+        $comparePrice.hide();
+      }
+
+    } else {
+      // The variant doesn't exist, disable submit button.
+      // This may be an error or notice that a specific variant is not available.
+      $addToCart.addClass('disabled').prop('disabled', true);
+      $addToCartText.html({{ 'products.product.unavailable' | t | json }});
+      $variantQuantity.removeClass('is-visible');
+      $quantityElements.hide();
+    }
+  };
+
+  jQuery(function($) {
+    new Shopify.OptionSelectors('productSelect', {
+      product: {{ product | json }},
+      onVariantSelected: selectCallback,
+      enableHistoryState: true
+    });
+
+    // Add label if only one product option and it isn't 'Title'. Could be 'Size'.
+    {% if product.options.size == 1 and product.options.first != 'Title' %}
+      $('.selector-wrapper:eq(0)').prepend('<label>{{ product.options.first | escape }}</label>');
+    {% endif %}
+
+    // Hide selectors if we only have 1 variant and its title contains 'Default'.
+    {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
+      $('.selector-wrapper').hide();
+    {% else %}
+      $('#variantBreak').removeClass('hr--clear');
+    {% endif %}
+  });
+</script>
+
+{% if settings.product_image_zoom_enable %}
+  {{ 'jquery.zoom.min.js' | asset_url | script_tag }}
+{% endif %}
+
+
+{% if product.type == "implants" %}
+
+  <!-- 2018.02.23 to add new related  -->
+    {% include 'related-surgical-products-tags' %}
+    {% include 'related-prosthetic-products-tags' %}
+
+{% else %}
+	{% if product.id == 210239782937 or product.id == 210240503833 %}
+		{% include 'related-product-other' %}
+	{% else %}
+		{% include 'related-products-tags' %}
+	{% endif %}
+{% endif %}
+
+

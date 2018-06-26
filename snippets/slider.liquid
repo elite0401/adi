@@ -1,0 +1,27 @@
+{% assign hero_enabled = true %}
+<div class="flexslider" id="heroSlider">
+  <ul class="slides">
+    {% for i in (1..6) %}
+      {% capture slide %}slide_{{ i }}{% endcapture %}
+      {% capture slide_link %}slide_{{ i }}_link{% endcapture %}
+      {% capture slide_img %}slide_{{ i }}.gif{% endcapture %}
+      {% capture slide_alt %}slide_{{ i }}_alt{% endcapture %}
+      {% if settings[slide] %}
+        <li>
+          <a href="{{ settings[slide_link] }}" class="slide-link">
+            {% comment %}
+			Dec 21 - 09:59 - Zachary Poirier Guru :
+			Adding gif code as per help docs.
+			{% endcomment %}
+            {% if forloop.index == 4 %}
+            {{ 'Slide_4.gif' | asset_url | img_tag: slide_alt }}
+            {% else %}
+            {{ slide_img | asset_url | img_tag: slide_alt }}
+            {% endif %}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+

@@ -1,0 +1,55 @@
+{% comment %}
+  Number of related items per row,
+  and number of rows.
+{% endcomment %}
+
+{% assign number_of_related_products_per_row = 5 %}
+{% assign number_of_rows = 1 %}
+
+{% comment %}
+  Heading.
+  Leave blank if you don't need one.
+{% endcomment %}
+
+{% assign heading = 'Related Surgical Products' %}
+
+
+  <aside class="grid">
+    <div class="grid__item">
+      {% unless heading == blank %}
+      <header class="section-header">
+        <h2 class="section-header__title" style="padding-top: 20px;">{{ heading }}</h1>
+      </header>
+      {% endunless %}
+      <div class="grid-uniform related-surgical-products">
+          <!-- for Drills link  -->	
+          <div class="grid-item large--one-fifth medium--one-third small--one-half">
+
+            <a href="/collections/all/drills" class="product-grid-item">
+              <div class="product-grid-image">
+                <div class="product-grid-image--centered">
+
+                  <img src="//cdn.shopify.com/s/files/1/0866/5944/files/Drills_icon_0732429b-bd9e-41ff-aa88-5a0a3fa45185.jpg?13483789108339846739" alt="Drills">
+                </div>
+              </div>
+              <p class="text-center">Drills</p>
+            </a>
+          </div>        
+
+          <!-- 4mm squar drive  -->	
+          <div class="grid-item large--one-fifth medium--one-third small--one-half">
+
+            <a href="/collections/all/tools" class="product-grid-item">
+              <div class="product-grid-image">
+                <div class="product-grid-image--centered">
+
+                  <img src="//cdn.shopify.com/s/files/1/0866/5944/files/4mm_Square_Drive_System_icon_42072eb0-f317-44ff-ade3-e178b9e9777c.jpg?13483789108339846739" alt="4mm Square Drive">
+                </div>
+              </div>
+              <p class="text-center">4mm Square Drive</p>
+            </a>
+          </div>        
+        
+      </div>
+    </div>
+  </aside>
