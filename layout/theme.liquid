@@ -32,6 +32,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <link href="http://vjs.zencdn.net/6.2.8/video-js.css" rel="stylesheet">
+  {{ 'jquery.fancybox.min.css' | asset_url | stylesheet_tag }}
 
   {% if settings.ajax_cart_method != 'page' %}
   <!-- Ajaxify Cart Plugin ================================================== -->
@@ -56,6 +57,7 @@
   {% endif %}
 
   {{ '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' | script_tag }}
+  {{ 'jquery.fancybox.min.js' | asset_url | script_tag }}
   {{ 'modernizr.min.js' | asset_url | script_tag }}
   <script src="http://vjs.zencdn.net/6.2.8/video.js"></script>
   
@@ -349,5 +351,12 @@
   </script>
 {% endif %}
 
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("a#gif_link").fancybox({
+      'hideOnContentClick': true
+    });
+  });
+</script>
 </body>
 </html>

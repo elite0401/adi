@@ -11,6 +11,10 @@ assets/ajaxify.js.liquid:
   development: 2016-12-29T00:31:24-05:00   0cb0b13d9bb9563f30d6a2eaaa8c9cbb
 assets/ajaxify.scss.liquid:
   development: 2016-12-29T00:31:24-05:00   abe1d840d3e59232d2550f27c79f432a
+assets/animation.gif:
+  development: 2018-06-26T13:14:34-04:00   67f3bc6f7d4843033c0950e598f19049
+assets/animation_r6_00000.jpg:
+  development: 2018-06-26T13:00:21-04:00   d8bf076f7d93e005eea5aa59064d4d81
 assets/arrow-down.svg.liquid:
   development: 2016-12-29T00:31:24-05:00   8ef09e0a76c55257323a2545c5fd0446
 assets/fastclick.min.js:
@@ -29,6 +33,10 @@ assets/icons.ttf:
   development: 2016-12-29T00:31:25-05:00   08788d0b03d0cdf4bc4571b34c8d34bb
 assets/icons.woff:
   development: 2016-12-29T00:31:25-05:00   47295cd2af705c33452820f2b0ee1ced
+assets/jquery.fancybox.min.css:
+  development: 2018-06-26T13:07:42-04:00   1679dcd38f5d43f1ef64c0ff331af810
+assets/jquery.fancybox.min.js:
+  development: 2018-06-26T13:07:43-04:00   b762d7a222031899a8b3d8fa8e6a21cf
 assets/jquery.flexslider.min.js:
   development: 2016-12-29T00:31:25-05:00   9ec3c315b67f434aabc4da58eabc6c3a
 assets/jquery.zoom.min.js:
@@ -60,13 +68,13 @@ assets/slide_5.gif:
 assets/slide_6.gif:
   development: 2016-12-29T00:31:28-05:00   9c9e72ae77c1580d037e95176b9641c0
 assets/timber.scss.liquid:
-  development: 2018-03-06T20:47:56-05:00   3517d5b4a1c6960d63c508dd8b1b787a
+  development: 2018-06-26T13:22:44-04:00   5625e98a5c3609d9f6b0aec1fdf3529e
 config/settings_data.json:
   development: 2018-02-03T01:24:17-05:00   61ae5ac4c077ebe1d926782b6fd3f201
 config/settings_schema.json:
   development: 2017-01-17T00:22:54-05:00   cea97e2116b8c12a590ab9ee6b9b44a4
 layout/theme.liquid:
-  development: 2018-04-18T16:39:26-04:00   71541a486c46573cc2b64076e24dfd7f
+  development: 2018-06-26T13:21:45-04:00   ecc94cf6beed380bf08422b358b7cfee
 locales/de.json:
   development: 2016-12-29T00:31:28-05:00   9b33e5d7a56908a24f887bacda9d8c93
 locales/en.default.json:
@@ -202,6 +210,6 @@ templates/page.list-collections.liquid:
 templates/password.liquid:
   development: 2016-12-29T00:31:29-05:00   06c906a44901cdf14e5ebd35d9d44c22
 templates/product.liquid:
-  development: 2018-04-23T15:51:05-04:00   775817ff1969a22727c15d456d752aa6
+  development: 2018-06-26T13:21:56-04:00   b036c75bda74658f01df8efe6634524d
 templates/search.liquid:
   development: 2016-12-29T00:31:29-05:00   fbd64c43c245c1fc343bbc4c28703fb0
