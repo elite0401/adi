@@ -14,7 +14,7 @@ assets/ajaxify.scss.liquid:
 assets/animation.gif:
   development: 2018-06-26T13:14:34-04:00   67f3bc6f7d4843033c0950e598f19049
 assets/animation_r6_00000.jpg:
-  development: 2018-06-26T13:00:21-04:00   d8bf076f7d93e005eea5aa59064d4d81
+  development: 2018-06-28T17:08:02-04:00   a8390b9a0250639194ef801dea7c0d66
 assets/arrow-down.svg.liquid:
   development: 2016-12-29T00:31:24-05:00   8ef09e0a76c55257323a2545c5fd0446
 assets/fastclick.min.js:
@@ -26,7 +26,7 @@ assets/handlebars.min.js:
 assets/icons.eot:
   development: 2016-12-29T00:31:25-05:00   6ca7910be4907c6384489a55bd7e3062
 assets/icons.json:
-  development: 2016-12-29T00:31:25-05:00   69b07a1111b7736a242d32d4c046aa44
+  development: 2018-06-28T15:56:51-04:00   69b07a1111b7736a242d32d4c046aa44
 assets/icons.svg:
   development: 2016-12-29T00:31:25-05:00   6b9677caa8d55e9cf7ce051b7a340bb9
 assets/icons.ttf:
@@ -68,25 +68,25 @@ assets/slide_5.gif:
 assets/slide_6.gif:
   development: 2016-12-29T00:31:28-05:00   9c9e72ae77c1580d037e95176b9641c0
 assets/timber.scss.liquid:
-  development: 2018-06-26T13:22:44-04:00   5625e98a5c3609d9f6b0aec1fdf3529e
+  development: 2018-06-28T16:06:37-04:00   9474a608a163e6de6fca04de61fad2f9
 config/settings_data.json:
   development: 2018-02-03T01:24:17-05:00   61ae5ac4c077ebe1d926782b6fd3f201
 config/settings_schema.json:
   development: 2017-01-17T00:22:54-05:00   cea97e2116b8c12a590ab9ee6b9b44a4
 layout/theme.liquid:
-  development: 2018-06-26T13:21:45-04:00   ecc94cf6beed380bf08422b358b7cfee
+  development: 2018-06-28T16:04:42-04:00   91d4922562ebb59f22709c8c438aaa5a
 locales/de.json:
-  development: 2016-12-29T00:31:28-05:00   9b33e5d7a56908a24f887bacda9d8c93
+  development: 2018-06-28T15:57:05-04:00   9b33e5d7a56908a24f887bacda9d8c93
 locales/en.default.json:
   development: 2017-02-07T16:00:06-05:00   bb2ecd3ec1f56e56e0aae275c46b0756
 locales/es.json:
-  development: 2016-12-29T00:31:28-05:00   db9e693169b7e541c9d0e01156dc754c
+  development: 2018-06-28T15:57:05-04:00   db9e693169b7e541c9d0e01156dc754c
 locales/fr.json:
-  development: 2016-12-29T00:31:28-05:00   bd957626ad2d7d5e0bd14cfc0a2f6a40
+  development: 2018-06-28T15:57:06-04:00   bd957626ad2d7d5e0bd14cfc0a2f6a40
 locales/pt-BR.json:
-  development: 2016-12-29T00:31:28-05:00   1a8a4f1b44d079091c675543a30a3610
+  development: 2018-06-28T15:57:07-04:00   1a8a4f1b44d079091c675543a30a3610
 locales/pt-PT.json:
-  development: 2016-12-29T00:31:28-05:00   4c18963ac58b0341c6db2e368ad9a404
+  development: 2018-06-28T15:57:07-04:00   4c18963ac58b0341c6db2e368ad9a404
 snippets/advanced-tag-loop.liquid:
   development: 2016-12-29T00:31:28-05:00   cd9725f80a883782e2de4fd1f652079c
 snippets/ajax-cart-template.liquid:
@@ -210,6 +210,6 @@ templates/page.list-collections.liquid:
 templates/password.liquid:
   development: 2016-12-29T00:31:29-05:00   06c906a44901cdf14e5ebd35d9d44c22
 templates/product.liquid:
-  development: 2018-06-26T13:21:56-04:00   b036c75bda74658f01df8efe6634524d
+  development: 2018-06-28T17:12:20-04:00   155c1afadbd405fd2d57276d03ed2797
 templates/search.liquid:
   development: 2016-12-29T00:31:29-05:00   fbd64c43c245c1fc343bbc4c28703fb0

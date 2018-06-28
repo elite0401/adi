@@ -353,8 +353,12 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-    $("a#gif_link").fancybox({
+    /*$("a#gif_link").fancybox({
       'hideOnContentClick': true
+    });*/
+    $('.embed_gif').on('click', function() {
+      gif_url = $(this).data('gif');
+      $(this).find('img').attr('src', gif_url);
     });
   });
 </script>
