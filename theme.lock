@@ -3,6 +3,8 @@ assets/3.2_implant_cutaway_view.jpg:
   development: 2018-04-23T15:50:54-04:00   3138e3ae1bab7481fffeb5d00af2b9b7
 assets/3.8animation.mp4:
   development: 2018-04-18T16:45:33-04:00   b2218bd8d883c42bce651058fac85eb4
+assets/ADI_BlueMagicSystem-02.jpg:
+  development: 2018-07-26T15:10:48-04:00   c44cb476a7bbd344fadc7bd2a0fc218f
 assets/SkinnySkit6_1.gif:
   development: 2016-12-29T00:31:27-05:00   d352e2d9dd10909e1398044210e85437
 assets/Slide_4.gif:
@@ -210,6 +212,6 @@ templates/page.list-collections.liquid:
 templates/password.liquid:
   development: 2016-12-29T00:31:29-05:00   06c906a44901cdf14e5ebd35d9d44c22
 templates/product.liquid:
-  development: 2018-07-19T17:23:07-04:00   6ed6526893b94f11222b7a003a32f9f6
+  development: 2018-07-26T15:10:59-04:00   2bc90e506e840d4e7b93917d2089b697
 templates/search.liquid:
   development: 2016-12-29T00:31:29-05:00   fbd64c43c245c1fc343bbc4c28703fb0
