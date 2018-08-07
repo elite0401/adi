@@ -136,7 +136,7 @@ snippets/price-sale.liquid:
 snippets/price.liquid:
   development: 2016-12-29T00:31:29-05:00   94fef1e1485684c986b2aaee7db3f6cf
 snippets/product-grid-item.liquid:
-  development: 2017-03-24T10:32:46-04:00   dc39e3d7f042cb6a12086c5fbf444c6b
+  development: 2018-08-07T15:39:24-04:00   ec9406dd47b4d96823b44d6dc9ce858a
 snippets/product-list-item.liquid:
   development: 2016-12-29T00:31:29-05:00   b01cf2a18708025f7d6afa7047e653ed
 snippets/related-product-other.liquid:
@@ -180,9 +180,9 @@ templates/blog.liquid:
 templates/cart.liquid:
   development: 2016-12-29T00:31:29-05:00   287d9a0490c26e65c416360722d8b520
 templates/collection.liquid:
-  development: 2018-04-18T16:52:55-04:00   57e55182fa399a1c25c1f2ffba5b597b
+  development: 2018-08-07T15:36:57-04:00   18c067f62e80c1f766becff19e2f40e1
 templates/collection.list.liquid:
-  development: 2016-12-29T00:31:29-05:00   cbdc78a237a1dacecf53010d2280b415
+  development: 2018-08-07T15:08:48-04:00   c7767c4c7c69efd688510023151c20a0
 templates/customers/account.liquid:
   development: 2016-12-29T00:31:29-05:00   e63a5c9c284cfd5ce284e852154069d8
 templates/customers/activate_account.liquid:
