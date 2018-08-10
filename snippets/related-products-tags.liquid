@@ -107,6 +107,14 @@
       </header>
       {% endunless %}
       <div class="grid-uniform">
+        {% if current_product.id == 179302858777 %}
+        {% assign product = all_products['th3002'] %}
+        {% include 'product-grid-item' %}
+        {% assign product = all_products['th3003'] %}
+        {% include 'product-grid-item' %}
+        {% assign product = all_products['th3005'] %}
+        {% include 'product-grid-item' %}
+        {% endif %}
         {{ related_items }}
       </div>
     </div>

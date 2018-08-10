@@ -9,6 +9,8 @@ assets/SkinnySkit6_1.gif:
   development: 2016-12-29T00:31:27-05:00   d352e2d9dd10909e1398044210e85437
 assets/Slide_4.gif:
   development: 2016-12-29T00:31:28-05:00   d352e2d9dd10909e1398044210e85437
+assets/XL5.7_Taper_Implant.jpg:
+  development: 2018-08-10T15:27:13-04:00   b27cc7ec4323ff5cc2ceb331cc34ed9b
 assets/ajaxify.js.liquid:
   development: 2016-12-29T00:31:24-05:00   0cb0b13d9bb9563f30d6a2eaaa8c9cbb
 assets/ajaxify.scss.liquid:
@@ -142,7 +144,7 @@ snippets/product-list-item.liquid:
 snippets/related-product-other.liquid:
   development: 2018-03-14T21:23:15-04:00   66560fa8bf4d9dcbe50b63b8021bf747
 snippets/related-products-tags.liquid:
-  development: 2018-02-23T02:55:18-05:00   6bd4bf148da6dd23650fd91a3b7a3342
+  development: 2018-08-10T15:24:58-04:00   7187e4da13b01d27b31f19ee060a3269
 snippets/related-products.liquid:
   development: 2016-12-29T00:31:29-05:00   fd690eff6367b96fca61f04fa7a14a89
 snippets/related-prosthetic-products-tags.liquid:
@@ -212,6 +214,6 @@ templates/page.list-collections.liquid:
 templates/password.liquid:
   development: 2016-12-29T00:31:29-05:00   06c906a44901cdf14e5ebd35d9d44c22
 templates/product.liquid:
-  development: 2018-07-30T12:13:25-04:00   b59cd7859c228f2a4c01c42f4cdc54ea
+  development: 2018-08-10T15:28:10-04:00   5db8e650613885864b53e704b750b73c
 templates/search.liquid:
   development: 2016-12-29T00:31:29-05:00   fbd64c43c245c1fc343bbc4c28703fb0
