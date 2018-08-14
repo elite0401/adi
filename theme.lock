@@ -214,6 +214,6 @@ templates/page.list-collections.liquid:
 templates/password.liquid:
   development: 2016-12-29T00:31:29-05:00   06c906a44901cdf14e5ebd35d9d44c22
 templates/product.liquid:
-  development: 2018-08-10T15:28:10-04:00   5db8e650613885864b53e704b750b73c
+  development: 2018-08-14T14:28:31-04:00   ddc21f0b10d3c6c6836caaa16898734d
 templates/search.liquid:
   development: 2016-12-29T00:31:29-05:00   fbd64c43c245c1fc343bbc4c28703fb0
