@@ -10,83 +10,59 @@
         <div class="product-photo-container" id="productPhoto">
           {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
           <img id="productPhotoImg" src="{{ featured_image | img_url: 'large' }}" alt="{{ featured_image.alt | escape }}" {% if settings.product_image_zoom_enable %} data-zoom="{{ featured_image | img_url: '1024x1024' }}"{% endif %}>
-          
         </div>
-
-           
-        <!-- Product ID -->
-		<!-- 2.4 SKINNY=546164931, 3.0 GT=179302858777, 3.5 GT=179302957081, 3.3 Straight=4842146630, 3.7 Straight=4842152454, 3.7 Tapper=4842179526 -->
-<!-- 		{{ product.id }} -->
         
         {% if product.images.size > 1 %}
           <ul class="product-photo-thumbs grid-uniform" id="productThumbs">
-
-			<!--             
-			{% for image in product.images %}
-              <li class="grid-item medium-down--one-quarter large--one-quarter">
-                <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
-                  <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
-                </a>
-              </li>
-            {% endfor %} 
-			-->
-            
             {% for image in product.images %}
             	{% if product.id == 4842146630 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 or product.id == 4842152454 or product.id == 4842259078 %}
             		<!-- 3.3 STRAIGHT WAL , 3.7 Tapper, 4.7 straight wal, 4.7 Taper, 3.7 Straight, 5.7XL Taper -->
             		{% if forloop.first == true %}
-                      <li class="grid-item medium-down--one-fifth large--one-fifth">
-                        <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
-                          <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
-                        </a>                        
-                      </li>
-                      <li class="grid-item medium-down--one-fifth large--one-fifth">
-                      </li>
-                      <li class="grid-item medium-down--one-fifth large--one-fifth">
-                      </li>
-                      <li class="grid-item medium-down--one-fifth large--one-fifth">
-                      </li>
-                      <li class="grid-item medium-down--one-fifth large--one-fifth">
-                      </li>
-            
+                  <li class="grid-item medium-down--one-fifth large--one-fifth">
+                    <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
+                      <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+                    </a>                        
+                  </li>
+                  <li class="grid-item medium-down--one-fifth large--one-fifth">
+                  </li>
+                  <li class="grid-item medium-down--one-fifth large--one-fifth">
+                  </li>
+                  <li class="grid-item medium-down--one-fifth large--one-fifth">
+                  </li>
+                  <li class="grid-item medium-down--one-fifth large--one-fifth">
+                  </li>
             		{% else %}
-                      <li class="grid-item medium-down--one-fifth large--one-fifth">
-                        <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
-                          <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
-                        </a>
-                        {% for variant in image.variants %}
-                        <div>{{ variant.title }}</div>
-                        {% endfor %}
-                      </li>
+                  <li class="grid-item medium-down--one-fifth large--one-fifth">
+                    <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
+                      <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+                    </a>
+                    {% for variant in image.variants %}
+                    <div>{{ variant.title }}</div>
+                    {% endfor %}
+                  </li>
             		{% endif %}
             	{% elsif product.id == 179302957081 or product.id == 179304955929 or product.id == 179303186457 or product.id == 210239782937 or product.id == 210240503833 %}
             		<!-- 3.5GT=179302957081, 4.5GT=179303186457, 5.7GT=179304955929, ORS45, ORS35 -->
             		{% if forloop.first == false %}
-                      <li class="grid-item medium-down--one-fifth large--one-fifth">
-                        <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
-                          <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
-                        </a>
-                      </li>
+                  <li class="grid-item medium-down--one-fifth large--one-fifth">
+                    <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
+                      <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+                    </a>
+                  </li>
             		{% endif %}
             	{% elsif product.id == 546164931 %}
             		<!-- 2.4 SKINNY -->
             		  {% if forloop.index == 2 %}
-                        <li class="grid-item medium-down--one-quarter large--one-quarter">
-                        </li>
-                        <li class="grid-item medium-down--one-quarter large--one-quarter">
-                        </li>
-                        <li class="grid-item medium-down--one-quarter large--one-quarter">
-                        </li>
-            			
-            		  {% endif %}	
-                      <li class="grid-item medium-down--one-quarter large--one-quarter">
-                        <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
-                          <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
-                        </a>
-                      </li>
-            		
+                    <li class="grid-item medium-down--one-quarter large--one-quarter"></li>
+                    <li class="grid-item medium-down--one-quarter large--one-quarter"></li>
+                    <li class="grid-item medium-down--one-quarter large--one-quarter"></li>
+        		  {% endif %}	
+                <li class="grid-item medium-down--one-quarter large--one-quarter">
+                  <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
+                    <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+                  </a>
+                </li>
             	{% else %}
-            		
                   <li class="grid-item medium-down--one-quarter large--one-quarter">
                     <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
                       <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
@@ -94,8 +70,6 @@
                   </li>
             	{% endif %}
             {% endfor %}
-            
-
           </ul>
         {% endif %}
 
@@ -110,26 +84,17 @@
         {% endif %}
       </div>
     </div>
-
-    
-
   </div>
 
   <div class="grid-item large--three-fifths">
-
     <h2 itemprop="name">{{ product.title }}</h2>
-
     {% if settings.product_vendor_enable %}
       <p class="product-meta" itemprop="brand">{{ product.vendor }}</p>
     {% endif %}
-
     <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-
       {% assign variant = product.selected_or_first_available_variant %}
-
       <meta itemprop="priceCurrency" content="{{ shop.currency }}">
       <meta itemprop="price" content="{{ variant.price | money_without_currency }}">
-
       <ul class="inline-list product-meta">
         <li>
           <span id="productPrice" class="h1">
@@ -151,11 +116,8 @@
           </li>
         {% endif %}
       </ul>
-
       <hr id="variantBreak" class="hr--clear hr--small">
-
       <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
-
       <form action="/cart/add" method="post" enctype="multipart/form-data" id="addToCartForm">
         <select name="id" id="productSelect" class="product-variants">
           {% for variant in product.variants %}
@@ -184,19 +146,14 @@
           <span id="variantQuantity" class="variant-quantity"></span>
         {% endif %}
       </form>
-
       <hr>
-
     </div>
-
     <div class="product-description rte" itemprop="description">
       {{ product.description }}
     </div>
-
     {% if settings.social_sharing_products %}
       {% include 'social-sharing' %}
     {% endif %}
-    
     {% if product.handle == 'cement-on-abutments' or product.handle == 'wide-diameter-cement-on-abutments' or product.handle == 'xl-diameter-cement-on-abutments' %}
     <div class="product-features">
       <h4>Features:</h4>
@@ -207,11 +164,8 @@
       Analogs are machined from 17/4 surgical grade stainless steel for durability and reuse.</p>
     </div>
     {% endif %}
-
   </div>
 </div>
-
-
 <!--  Dalla Bona / O-Ring Abutment Driver -->
 {% if product.id == 6275381958 %}
     <div style="margin-top: 10px; border-top: solid 1px #eeeeee;">
@@ -278,7 +232,6 @@
   </a>
 {% endif %}
 
-
 {% if product.id == 4842146630 %}
   <!-- 3.3 Straight Wall -->
   <br/><br/>
@@ -288,7 +241,6 @@
     </div>
   </a>
 {% endif %}
-
 
 {% if product.id == 4842152454 %}
   <!-- 3.7 Straight Wall -->
@@ -365,21 +317,7 @@
   </a>
 {% endif %}  
 
-<!-- 
-{% if settings.related_products_enable %}
-  {% assign grid_item_width = 'large--one-fifth medium--one-third small--one-half' %}
-  {% include 'related-products' %}
-{% endif %}
-
-{% if settings.product_reviews_enable %}
-  <hr>
-  <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
-{% endif %}
- -->
-
-
 {{ 'option_selection.js' | shopify_asset_url | script_tag }}
-
 
 <script>
 
@@ -493,13 +431,10 @@
   {{ 'jquery.zoom.min.js' | asset_url | script_tag }}
 {% endif %}
 
-
 {% if product.type == "implants" %}
-
   <!-- 2018.02.23 to add new related  -->
     {% include 'related-surgical-products-tags' %}
     {% include 'related-prosthetic-products-tags' %}
-
 {% else %}
 	{% if product.id == 210239782937 or product.id == 210240503833 %}
 		{% include 'related-product-other' %}
