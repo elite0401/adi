@@ -3,24 +3,42 @@ assets/3.2_implant_cutaway_view.jpg:
   development: 2018-04-23T15:50:54-04:00   3138e3ae1bab7481fffeb5d00af2b9b7
 assets/3.2GT.jpg:
   development: 2018-08-21T03:52:36-04:00   63770c7ea32a9a89a7379a1f2774ab22
+assets/3.2GT_original.jpg:
+  development: 2018-08-21T15:39:05-04:00   e0f441466bf0a7ebcde12c1a767e3f53
 assets/3.3SW.jpg:
   development: 2018-08-21T03:52:38-04:00   08b4ff1d98e59defd9a9e730905fe429
+assets/3.3SW_original.jpg:
+  development: 2018-08-21T15:44:25-04:00   d136372c30b5651a6b0044c30e8ac475
 assets/3.5GT.jpg:
   development: 2018-08-21T03:52:37-04:00   4ba29b4d4007611d3d783abcfb072611
+assets/3.5GT_original.jpg:
+  development: 2018-08-21T15:44:31-04:00   94b3ba61d84d6e127cc06e338274db4d
 assets/3.7SW.jpg:
   development: 2018-08-21T03:52:37-04:00   3670f2f0dd52a547421ceec4355db016
+assets/3.7SW_original.jpg:
+  development: 2018-08-21T15:44:53-04:00   0c0632c7e176539efa047a5b13404b62
 assets/3.7T.jpg:
   development: 2018-08-21T03:52:39-04:00   f0101c3f6df7b844e7a43fefd7437252
+assets/3.7T_original.jpg:
+  development: 2018-08-21T15:45:20-04:00   100886ebdac68d7f456644ef95abdd44
 assets/3.8animation.mp4:
   development: 2018-04-18T16:45:33-04:00   b2218bd8d883c42bce651058fac85eb4
 assets/4.5GT.jpg:
   development: 2018-08-21T03:52:38-04:00   9a2aeeb06f4a6c9dd07fda506513301d
+assets/4.5GT_original.jpg:
+  development: 2018-08-21T15:45:42-04:00   40ff32b6e50bb598541a01e9b26b29fe
 assets/4.7StraightWall.jpg:
   development: 2018-08-21T03:52:39-04:00   4925163edc11474f9f2134c7c32ec9dd
+assets/4.7StraightWall_original.jpg:
+  development: 2018-08-21T15:46:03-04:00   d923d4c15db19c467b49fba88aeb3ebc
 assets/4.7T.jpg:
   development: 2018-08-21T03:52:39-04:00   95b04ef663d33ddc73b9e94707eb83ba
+assets/4.7T_original.jpg:
+  development: 2018-08-21T15:46:36-04:00   3ce526644124ca7495dd69b301d38c13
 assets/5.7GT.jpg:
   development: 2018-08-21T03:52:39-04:00   c5355748f39c834c2f4b22b518856cd9
+assets/5.7GT_original.jpg:
+  development: 2018-08-21T15:46:58-04:00   853c7c3bfcf4c28dbab506d516858ceb
 assets/ADI_BlueMagicSystem-02.jpg:
   development: 2018-07-26T15:10:48-04:00   c44cb476a7bbd344fadc7bd2a0fc218f
 assets/SkinnySkit6_1.gif:
@@ -29,6 +47,8 @@ assets/Slide_4.gif:
   development: 2016-12-29T00:31:28-05:00   d352e2d9dd10909e1398044210e85437
 assets/XL5.7_Taper_Implant.jpg:
   development: 2018-08-21T03:52:40-04:00   8cbd4455e32e9494b25e1eb21b78f54d
+assets/XL5.7_Taper_Implant_original.jpg:
+  development: 2018-08-21T15:47:24-04:00   e558b6b480052f256adcbf2eef03749d
 assets/ajaxify.js.liquid:
   development: 2016-12-29T00:31:24-05:00   0cb0b13d9bb9563f30d6a2eaaa8c9cbb
 assets/ajaxify.scss.liquid:
@@ -39,6 +59,8 @@ assets/animation_r6_00000.jpg:
   development: 2018-06-28T17:08:02-04:00   a8390b9a0250639194ef801dea7c0d66
 assets/arrow-down.svg.liquid:
   development: 2016-12-29T00:31:24-05:00   8ef09e0a76c55257323a2545c5fd0446
+assets/evenZoom.js:
+  development: 2018-08-21T15:21:18-04:00   f53973856e7fb8942032c972bccc7eb2
 assets/fastclick.min.js:
   development: 2016-12-29T00:31:24-05:00   4c68290ccc4d503561895dff0821621f
 assets/favicon.png:
@@ -90,13 +112,13 @@ assets/slide_5.gif:
 assets/slide_6.gif:
   development: 2016-12-29T00:31:28-05:00   9c9e72ae77c1580d037e95176b9641c0
 assets/timber.scss.liquid:
-  development: 2018-06-28T16:06:37-04:00   9474a608a163e6de6fca04de61fad2f9
+  development: 2018-08-21T15:40:48-04:00   fd1f5031fdd11aea1f086ef7d7b84c8c
 config/settings_data.json:
   development: 2018-02-03T01:24:17-05:00   61ae5ac4c077ebe1d926782b6fd3f201
 config/settings_schema.json:
   development: 2017-01-17T00:22:54-05:00   cea97e2116b8c12a590ab9ee6b9b44a4
 layout/theme.liquid:
-  development: 2018-06-28T16:04:42-04:00   91d4922562ebb59f22709c8c438aaa5a
+  development: 2018-08-21T15:39:13-04:00   1cb669a113dbea33da7345de5b54a0ad
 locales/de.json:
   development: 2018-06-28T15:57:05-04:00   9b33e5d7a56908a24f887bacda9d8c93
 locales/en.default.json:
@@ -232,6 +254,6 @@ templates/page.list-collections.liquid:
 templates/password.liquid:
   development: 2016-12-29T00:31:29-05:00   06c906a44901cdf14e5ebd35d9d44c22
 templates/product.liquid:
-  development: 2018-08-21T03:42:43-04:00   a174e2b7f462bda3e535f672142ad949
+  development: 2018-08-21T15:55:43-04:00   1042cd540db0b8933bdd276c2b26e574
 templates/search.liquid:
   development: 2016-12-29T00:31:29-05:00   fbd64c43c245c1fc343bbc4c28703fb0
