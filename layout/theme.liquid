@@ -61,16 +61,16 @@
   {{ 'evenZoom.js' | asset_url | script_tag }}
   {{ 'modernizr.min.js' | asset_url | script_tag }}
   <script src="http://vjs.zencdn.net/6.2.8/video.js"></script>
-  
+
 </head>
 
-<body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
+<body id="{{ page_title | handle }}" class="{% if template == 'page.regular-video' %}has-video{% endif %} {% if template == 'index' or template == 'page.regular' or template == 'page.regular-video' %}has-shadow has-bg{% endif %} {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
 
   <header class="site-header" role="banner">
     <div class="wrapper">
 
       <div class="grid--full">
-        <div class="grid-item large--one-half">
+        <div class="grid-item large--two-quarters">
           {% if template == 'index' %}
             <h1 class="header-logo" itemscope itemtype="http://schema.org/Organization">
           {% else %}
@@ -89,8 +89,10 @@
             </div>
           {% endif %}
         </div>
+        <div class="grid-item large--one-quarter">
+        </div>
 
-        <div class="grid-item large--one-half text-center large--text-right">
+        <div class="grid-item large--one-quarter large--text-right">
           {% if settings.header_message != blank or shop.customer_accounts_enabled %}
             <div class="site-header--text-links{% if settings.header_message == blank %} medium-down--hide{% endif %}">
               {% if settings.header_message != blank %}
@@ -147,11 +149,47 @@
     </div>
   </div>
 
-  <main class="wrapper main-content" role="main">
+  {% if template == 'index' %}
+  <div class="wrapper" id="cta">
+    <h3 class="text-center">
+      <a href="">BUY ONLINE</a>
+      <a href="">Case Studies</a>
+      <a href="">Videos</a>
+      <a href="">Tips & Techniques</a>
+    </h3>
+  </div>
+  {% endif %}
+
+  {% if template == 'page.regular-video' %}
+  <div class="wrapper video-container">
+    {% if page.id == 22270050417 %}
+      <iframe src="https://player.vimeo.com/video/190720002" class="has_border" width="936" height="527" allowfullscreen="allowfullscreen"></iframe>
+    {% elsif page.id == 22296985713 %}
+      <iframe src="https://player.vimeo.com/video/20639167" class="has_border" width="936" height="527" allowfullscreen="allowfullscreen"></iframe>
+    {% elsif page.id == 22297018481 %}
+      <iframe src="https://player.vimeo.com/video/43910773" class="has_border" width="936" height="527" allowfullscreen="allowfullscreen"></iframe>
+    {% elsif page.id == 22297051249 %}
+      <iframe src="https://player.vimeo.com/video/102949555" class="has_border" width="936" height="527" allowfullscreen="allowfullscreen"></iframe>
+    {% elsif page.id == 22297116785 %}
+      <iframe src="https://player.vimeo.com/video/166954839" class="has_border" width="936" height="527" allowfullscreen="allowfullscreen"></iframe>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <main class="wrapper main-content {% if template == 'page.regular' %}has-padding{% endif %}" role="main">
 
     {{ content_for_layout }}
 
   </main>
+
+  {% if template == 'index' or template == 'page.regular' or template == 'page.regular-video' %}
+  <div id="products-banner" class="wrapper">
+  	<div class="products-banner">
+      <h3>100% American-made dental implants and precision equipment.</h3>
+      <p><a class="btn" href="/features-benefits/made-in-the-usa/">Made In The USA</a></p>
+    </div>
+  </div>
+  {% endif %}
 
   {% capture theme_settings_link %}<a href="/admin/themes/{{ theme.id }}/settings">{{ 'layout.footer.theme_settings' | t }}</a>{% endcapture %}
 
@@ -320,10 +358,8 @@
 
   {{ 'shop.js' | asset_url | script_tag }}
 
-  {% if template == 'index' and hero_enabled %}
-    {{ 'jquery.flexslider.min.js' | asset_url | script_tag }}
-  {% endif %}
-  
+  {{ 'jquery.flexslider.min.js' | asset_url | script_tag }}
+
   <script>
   var moneyFormat = '{{ shop.money_format }}';
   </script>

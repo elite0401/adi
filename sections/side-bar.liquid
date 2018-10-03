@@ -1,0 +1,110 @@
+{% if page.id == 22268674161 or page.id == 22269165681 or page.id == 22269526129 or page.id == 22269624433 or page.id == 22269722737 or page.id == 22270050417 %}
+{% comment %}
+IMPLANT PARTS DETAIL
+{% endcomment %}
+  {% assign sidebar_menu = linklists.implant-parts-detail %}
+{% elsif page.id == 22270804081 %}
+{% comment %}
+RESOURCES
+{% endcomment %}
+  {% assign sidebar_menu = linklists.resources %}
+{% elsif page.id == 22271033457 or page.id == 22271131761 %}
+{% comment %}
+COMPANY
+{% endcomment %}
+  {% assign sidebar_menu = linklists.company %}
+{% elsif page.id == 22270378097 or page.id == 22296854641 or page.id == 22296887409 %}
+{% comment %}
+CASE STUDIES
+{% endcomment %}
+  {% assign sidebar_menu = linklists.case-studies %}
+{% elsif page.id == 22270509169 or page.id == 22296985713 or page.id == 22297018481 or page.id == 22297051249 %}
+{% comment %}
+VIDEOS
+{% endcomment %}
+  {% assign sidebar_menu = linklists.videos %}
+{% elsif page.id == 22270836849 %}
+{% comment %}
+Tips & Techniques
+{% endcomment %}
+  {% assign sidebar_menu = linklists.tips-techniques %}
+{% else %}
+  {% assign sidebar_menu = blank %}
+{% endif %}
+{% if sidebar_menu != blank %}
+  <h4 class="text-left">{{ sidebar_menu.title }}</h4>
+  <ul>
+    {% for link in sidebar_menu.links %}
+    <li><a href="{{ link.url }}" {% if link.active %}class="active"{% endif %}>{{ link.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,fr,it,ja,nl,ru,tr,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<br>
+<h4 class="text-left">NEED HELP</h4>
+<p><strong>1-800-511-0661</strong><br>1-724-657-0718 (international)<br>
+  <a href="/pages/contact-us">Contact Us</a>
+</p>
+
+{% schema %}
+{
+  "name": "Sidebar",
+  "class": "sidebar-template-section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Create a sidebar by adding content blocks."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "custom_menu_linklist",
+          "label": "Menu"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Text area can be used for special announcements or general information.</p>"
+        }
+      ]
+    },
+    {
+      "type": "page",
+      "name": "Page",
+      "settings": [
+        {
+          "type": "page",
+          "id": "content_page",
+          "label": "Page"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

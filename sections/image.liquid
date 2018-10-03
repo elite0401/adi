@@ -1,0 +1,57 @@
+<section class="{{ section.settings.layout }}">
+  <div class="grid">
+    <div class="grid-item large--one-whole medium--one-whole small--one-whole">
+      <div class="image_section">
+        {% if section.settings.image != blank %}
+          {% if section.settings.link != blank %}
+          <a href="{{ section.settings.link }}">
+          {% endif %}
+            <img  src="{{ section.settings.image | img_url: '2000x' }}"
+                  alt="{{ section.settings.image.alt }}"
+                  data-src="{{ section.settings.image | img_url: '2048x' }}"
+                  class="lazyload lazyload--fade-in"
+                  data-sizes="auto"
+                  data-srcset=" {{ section.settings.image | img_url: '2048x' }} 2048w,
+                                {{ section.settings.image | img_url: '1600x' }} 1600w,
+                                {{ section.settings.image | img_url: '1200x' }} 1200w,
+                                {{ section.settings.image | img_url: '1000x' }} 1000w,
+                                {{ section.settings.image | img_url: '800x' }} 800w,
+                                {{ section.settings.image | img_url: '600x' }} 600w,
+                                {{ section.settings.image | img_url: '400x' }} 400w"
+                   />
+          {% if section.settings.link != blank %}
+            </a>
+          {% endif %}
+        {% else %}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Image",
+    "class": "image-section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "1600 x 1600px recommended"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}

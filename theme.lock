@@ -59,6 +59,10 @@ assets/animation_r6_00000.jpg:
   development: 2018-06-28T17:08:02-04:00   a8390b9a0250639194ef801dea7c0d66
 assets/arrow-down.svg.liquid:
   development: 2016-12-29T00:31:24-05:00   8ef09e0a76c55257323a2545c5fd0446
+assets/banner-product-bg.png:
+  development: 2018-10-01T13:05:17-04:00   3f12a9a96deee67802648f4f7c87f88b
+assets/body-bg.jpg:
+  development: 2018-10-01T03:38:24-04:00   2dcac74caf82d53f5374f7cb7d156120
 assets/evenZoom.js:
   development: 2018-08-21T15:21:18-04:00   f53973856e7fb8942032c972bccc7eb2
 assets/fastclick.min.js:
@@ -67,6 +71,8 @@ assets/favicon.png:
   development: 2016-12-29T00:31:24-05:00   def796884090beb79a0df39c735ce318
 assets/handlebars.min.js:
   development: 2016-12-29T00:31:25-05:00   b3c11508a224ee83f86e2fc6491e9751
+assets/header-bg.png:
+  development: 2018-10-01T05:38:10-04:00   3b82a191315235506f2db76441c2c20a
 assets/icons.eot:
   development: 2016-12-29T00:31:25-05:00   6ca7910be4907c6384489a55bd7e3062
 assets/icons.json:
@@ -100,7 +106,7 @@ assets/respond-proxy.html:
 assets/respond.min.js:
   development: 2016-12-29T00:31:26-05:00   a2684e9b8fa50d6d11c56a9ada068528
 assets/shop.js.liquid:
-  development: 2018-03-01T01:42:38-05:00   5aeb2e2f66fc9e761bc586e8ae6df24d
+  development: 2018-10-02T01:40:40-04:00   5f9048ae0e561f4f0ff3603e2140528e
 assets/slide_1.gif:
   development: 2016-12-29T00:31:27-05:00   19004d851218ca3ddd43836753b09b81
 assets/slide_2.gif:
@@ -112,17 +118,17 @@ assets/slide_5.gif:
 assets/slide_6.gif:
   development: 2016-12-29T00:31:28-05:00   9c9e72ae77c1580d037e95176b9641c0
 assets/timber.scss.liquid:
-  development: 2018-08-21T15:40:48-04:00   fd1f5031fdd11aea1f086ef7d7b84c8c
+  development: 2018-10-03T10:19:03-04:00   808746a873f32e461936bf6a85740a0a
 config/settings_data.json:
   development: 2018-02-03T01:24:17-05:00   61ae5ac4c077ebe1d926782b6fd3f201
 config/settings_schema.json:
   development: 2017-01-17T00:22:54-05:00   cea97e2116b8c12a590ab9ee6b9b44a4
 layout/theme.liquid:
-  development: 2018-08-22T14:10:17-04:00   8a03727a67bc0edbd2ad4b229d4fc685
+  development: 2018-10-03T15:07:13-04:00   a01665a2dc090e8cf57a3349ee3cb1dd
 locales/de.json:
   development: 2018-06-28T15:57:05-04:00   9b33e5d7a56908a24f887bacda9d8c93
 locales/en.default.json:
-  development: 2017-02-07T16:00:06-05:00   bb2ecd3ec1f56e56e0aae275c46b0756
+  development: 2018-10-03T09:44:35-04:00   9a63608309eadf72833dc1711ccdc6cf
 locales/es.json:
   development: 2018-06-28T15:57:05-04:00   db9e693169b7e541c9d0e01156dc754c
 locales/fr.json:
@@ -131,6 +137,14 @@ locales/pt-BR.json:
   development: 2018-06-28T15:57:07-04:00   1a8a4f1b44d079091c675543a30a3610
 locales/pt-PT.json:
   development: 2018-06-28T15:57:07-04:00   4c18963ac58b0341c6db2e368ad9a404
+sections/featured-promotions.liquid:
+  development: 2018-10-01T04:33:41-04:00   19eeb730f4f72b23cdb11c99a43d3e0c
+sections/image.liquid:
+  development: 2018-10-01T03:34:14-04:00   01c53c31b31018f9e945aff68754b1d1
+sections/side-bar.liquid:
+  development: 2018-10-02T23:09:10-04:00   56b5437eb203c4aa3bc77b49e86a9f41
+sections/vimeo_video.liquid:
+  development: 2018-10-01T04:32:34-04:00   e42d058b97bd26ddff5fb1e1bf61d9a5
 snippets/advanced-tag-loop.liquid:
   development: 2016-12-29T00:31:28-05:00   cd9725f80a883782e2de4fd1f652079c
 snippets/ajax-cart-template.liquid:
@@ -200,7 +214,7 @@ snippets/search-result-grid.liquid:
 snippets/search-result.liquid:
   development: 2016-12-29T00:31:29-05:00   bb60eb0cbb377f073d21a04f64aa135d
 snippets/site-nav.liquid:
-  development: 2016-12-29T00:31:29-05:00   45ca4bfb82d0459f4fa4c7297a98dcbb
+  development: 2018-10-01T05:44:43-04:00   4844a82d8df10faa2655a0c346825ff8
 snippets/slider.liquid:
   development: 2016-12-29T00:31:29-05:00   6894f064fd69fd861185eb242e041d9c
 snippets/social-sharing.liquid:
@@ -218,7 +232,7 @@ templates/404.liquid:
 templates/article.liquid:
   development: 2016-12-29T00:31:29-05:00   cc866fa2e2ebd97ef39ef95851ca4509
 templates/blog.liquid:
-  development: 2016-12-29T00:31:29-05:00   9279326c14cb49ab9a0dd81402245f71
+  development: 2018-10-03T10:17:08-04:00   648ee1f953976e905d692127b2faa267
 templates/cart.liquid:
   development: 2016-12-29T00:31:29-05:00   287d9a0490c26e65c416360722d8b520
 templates/collection.liquid:
@@ -242,7 +256,7 @@ templates/customers/reset_password.liquid:
 templates/gift_card.liquid:
   development: 2016-12-29T00:31:29-05:00   e9c13e6e972f5ee1154bf77535dfa7dd
 templates/index.liquid:
-  development: 2018-08-22T14:14:01-04:00   573bd733f86269f62e92bffbd7541f0a
+  development: 2018-10-01T05:54:32-04:00   56b51b6f96394db4b17c64b43e1c0010
 templates/list-collections.liquid:
   development: 2016-12-29T00:31:29-05:00   e87ef306fab1637c64d5c62d5e09ddf5
 templates/page.contact.liquid:
@@ -251,6 +265,12 @@ templates/page.liquid:
   development: 2016-12-29T00:31:29-05:00   9e264d02df278c51d9d1a0083da16189
 templates/page.list-collections.liquid:
   development: 2016-12-29T00:31:29-05:00   15ad2844120e2757eb4ce5fc4c60b2db
+templates/page.regular-video.liquid:
+  development: 2018-10-03T02:43:39-04:00   e80b97295e8fabc0bf688d858d23cc15
+templates/page.regular.liquid:
+  development: 2018-10-03T10:06:28-04:00   70188834e155f16899ad327156ae38dd
+templates/page.shop_index.liquid:
+  development: 2018-10-01T05:00:11-04:00   5d7c4fa7159b8ba375fa2dcd34fb24da
 templates/password.liquid:
   development: 2016-12-29T00:31:29-05:00   06c906a44901cdf14e5ebd35d9d44c22
 templates/product.liquid:

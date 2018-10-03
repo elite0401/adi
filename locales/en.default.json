@@ -127,6 +127,7 @@
       "name": "Name",
       "email": "Email",
       "phone": "Phone Number",
+      "product_interest": "Product Interest",
       "message": "Message",
       "send": "Send",
       "post_success": "Thanks for contacting us. We'll get back to you as soon as possible."
@@ -270,7 +271,7 @@
       "mobile_menu": "Menu"
     },
     "search_bar": {
-      "placeholder": "Search all products...",
+      "placeholder": "Search ...",
       "submit": "Search"
     },
     "footer": {

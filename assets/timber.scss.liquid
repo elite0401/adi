@@ -1116,6 +1116,7 @@ hr {
   img {
     max-width: 100%;
     height: auto;
+    margin-right: $gutter/2;
   }
 
   // Add some top margin to headers from the rich text editor
@@ -1164,7 +1165,7 @@ hr {
   #Links and Buttons
 ==============================================================================*/
 a {
-  color: $colorLink;
+  color: #C40000;
   text-decoration: none;
   background: transparent;
 }
@@ -1349,7 +1350,10 @@ img.auto,
 .grid-item iframe {
   max-width: 100%;
 }
-
+.video-container {
+  padding: 0;
+  margin-top: 30px;
+}
 .video-wrapper {
   position: relative;
   overflow: hidden;
@@ -1364,6 +1368,7 @@ img.auto,
     left: 0;
     width: 100%;
     height: 100%;
+    border: 0;
   }
 }
 
@@ -2097,11 +2102,16 @@ $shareBorderColor: #ececec;
 ==============================================================================*/
 .site-header {
   padding: $gutter/2 0;
-  background-color: $headerBackground;
+  background: url({{ 'header-bg.png' | asset_url }}) $headerBackground no-repeat;
+  background-position: center;
   color: $headerText;
 
+  .wrapper {
+    padding: 0;
+  }
+
   @include at-query ($min, $large) {
-    padding: $gutter 0;
+    padding: $gutter/2 0;
   }
 
   .site-header--text-links a {
@@ -2180,10 +2190,12 @@ $shareBorderColor: #ececec;
   line-height: 26px;
   padding-bottom: 10px;
   border: 0 none;
-  margin-left: $gutter/2;
+  margin-left: $gutter/6;
   vertical-align: top;
   background-color: $headerButtonAndSearch;
   color: color-control($headerButtonAndSearch);
+  padding-left: 10px;
+  padding-right: 10px;
 
   @include at-query ($max, $medium) {
     display: none;
@@ -2340,12 +2352,20 @@ $shareBorderColor: #ececec;
   li {
     margin: 0;
     display: block;
+    &.site-nav--active,
+    &:hover {
+      background: #fff;
+      background: #f2f2f2;
+      a {
+        color: #666;
+      }
+    }
   }
 
   a {
     display: block;
     text-decoration: none;
-    padding: 15px 30px;
+    padding: $gutter/2;
   }
 
   .customer-navlink {
@@ -2497,6 +2517,7 @@ $shareBorderColor: #ececec;
       color: $colorPrimary;
       text-transform: none;
       padding: $gutter/3 $gutter*1.5 $gutter/3 $gutter/2;
+      text-align: left;
 
       &:hover,
       &:active,
@@ -4292,7 +4313,7 @@ img.mfp-img {
 .hometag {
   position:relative;
   display:inline-block;
-  	
+
 }
 .hometag a {
  	display:inline-block;
@@ -4329,7 +4350,7 @@ Onbroding css
 
 
 .image_section{
-	padding-bottom:50px;
+	padding-bottom:0;
   img{
   		margin:0 auto;
         display:block;
@@ -4401,4 +4422,151 @@ a.embed_gif {
     -khtml-opacity: 0;
     opacity: 0;
     visibility: hidden;
+}
+
+body {
+  &.has-bg {
+    background: url({{ 'body-bg.jpg' | asset_url }}) #AAB5D3 no-repeat;
+    background-position: top center;
+  }
+  &.has-shadow {
+    .wrapper {
+      &.main-content {
+        background-color: #fff;
+        box-shadow: 0 0 15px #666;
+        &.has-padding {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+  &.template-page {
+    &.has-video {
+
+    }
+  }
+}
+
+h2 {
+  &.thin {
+    text-transform: none;
+    color: #333;
+    font-weight: normal;
+  }
+}
+
+.video_section {
+  margin-top: $gutter/2;
+  iframe {
+    max-width: 100%;
+    &.has_border {
+      border: 2px solid #1c81b7;
+      border-radius: 5px;
+    }
+  }
+  h2 {
+    margin: $gutter/2 0;
+  }
+}
+
+.featured-promotions-section {
+  margin-top: $gutter/2;
+  ul {
+    list-style: square;
+    padding-inline-start: 20px;
+    padding-inline-end: 0;
+    li {
+      font-size: 0.9em;
+    }
+  }
+}
+#cta {
+  background: #C40000;
+  padding: 20px;
+  h3 {
+    margin-bottom: 0;
+    a {
+      color: #FFF;
+      text-transform: none;
+      text-decoration: underline;
+      padding-right: 5px;
+    }
+  }
+}
+
+#products-banner {
+  background: url({{ 'banner-product-bg.png' | asset_url }}) no-repeat;
+  background-size: cover;
+  margin: -14px auto 0 auto;
+  height: 148px;
+  .products-banner {
+    margin-left: 340px;
+    padding: 30px;
+    text-align: center;
+    h3 {
+      font-size: 14px;
+      color: #fff;
+      margin: $gutter/2 0;
+      text-shadow: 1px 1px 0 #93A1BE;
+      text-transform: none;
+    }
+    .btn {
+      background-color: #C00;
+      border-radius: 4px;
+      text-transform: uppercase;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+}
+
+.sidebar-template-section {
+  padding-top: 50px;
+  padding-left: 20px;
+  box-shadow: 2px 0px 0px 0px rgba(0, 0, 0, 0.03) inset;
+  h4 {
+    font-weight: normal;
+  }
+  ul {
+    li {
+      border-bottom: 1px dotted #ccc;
+      padding: 5px 0 7px 0;
+      a {
+        color: $colorLink;
+        &:before {
+          content: "<";
+          color: #CCC;
+          padding: 0 5px;
+        }
+        &.active {
+          font-weight: bold;
+          &:before {
+            color: #c40000;
+          }
+        }
+      }
+    }
+  }
+  #google_translate_element {
+    margin-top: 30px;
+  }
+}
+
+.page-title {
+  text-transform: none;
+}
+
+.contact-form {
+  select {
+    background-image: none;
+  }
+}
+
+.template-blog {
+  .page-title {
+    a {
+      color: #2f6dbd;
+    }
+  }
 }

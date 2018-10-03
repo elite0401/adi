@@ -88,13 +88,13 @@ timber.init = function () {
   {% if settings.collection_sidebar_filters == 'groups' %}
   timber.sortFilters();
   {% endif %}
-  
-  
+
+
   /* rename "Tools" to "4mm Square Drive"   */
-  
+
   $('#collectionFilters ul li a:contains("Tools")').text("4mm Square Drive");
   $('#collectionFilters ul li:contains("Tools")').text("4mm Square Drive");
-  
+
 };
 
 
@@ -224,7 +224,7 @@ timber.alignMenu = function () {
 
     if (wrapperWidth < w) {
       menuhtml += $('<div>').append($el.clone()).html();
-      $el.remove();
+      //$el.remove();
 
       // Ignore hidden customer links (for mobile)
       if (!$el.hasClass('large-hide')) {
@@ -233,19 +233,6 @@ timber.alignMenu = function () {
     }
   });
 
-  if (wrapperWidth < w) {
-    $nav.append(
-      '<li id="moreMenu" class="site-nav--has-dropdown">'
-        + '<a href="#">' + {{ 'layout.navigation.more' | t | json }} + '<span class="icon icon-arrow-down" aria-hidden="true"></span></a>'
-        + '<ul id="moreMenu--list" class="site-nav--dropdown">' + menuhtml + '</ul></li>'
-    );
-
-    if (i <= 1) {
-      // Bail, and replace original nav items
-      timber.cache.$navigation.append($('#moreMenu--list').html());
-      $('#moreMenu').remove();
-    }
-  }
 };
 
 timber.toggleMenu = function () {
@@ -298,11 +285,11 @@ timber.sliders = function () {
       };
 
   if ($slider.length) {
-    
+
     if ($slides.length === 1) {
-      sliderArgs.touch = false; 
+      sliderArgs.touch = false;
     }
-    
+
     $(window).on('load', function() {
       $slider.flexslider(sliderArgs);
     });
@@ -416,12 +403,12 @@ timber.socialSharing = function () {
 timber.equalHeights = function () {
   var $featuredBoxImageArray = [];
   var $featuredBoxArray = [];
-    
+
   timber.cache.$featuredContainer.each(function() {
     $featuredBoxImageArray.push($(this).find('.featured-box--image'));
     $featuredBoxArray.push($(this).find('.featured-box'));
   });
- 
+
   $(window).load(function() {
     resizeElements();
   });

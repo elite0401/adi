@@ -1,0 +1,43 @@
+<section class="{{ section.settings.layout }}">
+  <div class="grid">
+    <div class="grid-item large--one-whole medium--one-whole small--one-whole">
+      <div class="video_section">
+        {% if section.settings.video != blank %}
+            <iframe src="{{ section.settings.video }}" class="has_border" width="936" height="527" allowfullscreen="allowfullscreen"></iframe>
+        {% else %}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {% endif %}
+
+        {% if section.settings.text != blank %}
+        <h2 class="text-center thin">{{ section.settings.text }}</h2>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Vimeo",
+    "class": "video-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "video",
+        "label": "Video Url",
+        "info": "i.e https://player.vimeo.com/video/289530175?title=adi"
+      },
+      {
+        "type": "html",
+        "id": "text",
+        "label": "Description"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Video",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}

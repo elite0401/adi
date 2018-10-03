@@ -1,0 +1,67 @@
+<div class="grid">
+
+  {% if page.id == 22271197297 %}
+  <div class="grid-item large--one-whole">
+    <h1 class="text-center page-title">{{ page.title }}</h1>
+    <div class="text-center">
+      {{ page.content }}
+    </div>
+
+    {% form 'contact' %}
+
+      <div class="grid-item large--one-third small--one-whole">&nbsp;</div>
+      <div class="grid-item large--one-third small--one-whole">
+        {% if form.posted_successfully? %}
+          <p class="note form-success">
+            {{ 'contact.form.post_success' | t }}
+          </p>
+        {% endif %}
+
+        {% include 'form-errors-custom' %}
+
+        <div id="contactFormWrapper">
+          <label for="contactFormName" class="hidden-label">{{ 'contact.form.name' | t }}&nbsp;(required)</label>
+          <input type="text" id="contactFormName" name="contact[name]" placeholder="{{ 'contact.form.name' | t }}" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" required>
+
+          <label for="contactFormEmail" class="hidden-label">{{ 'contact.form.email' | t }}&nbsp;(required)</label>
+          <input type="email" id="contactFormEmail" name="contact[email]" placeholder="{{ 'contact.form.email' | t }}" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" required>
+
+          <label for="contactFormPhone" class="hidden-label">{{ 'contact.form.phone' | t }}&nbsp;(required)</label>
+          <input type="tel" id="contactFormPhone" name="contact[phone]" placeholder="{{ 'contact.form.phone' | t }}" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" required>
+
+          <label for="contactFormInterest">{{ 'contact.form.product_interest' | t }}</label>
+          <select name="contact[interest]" id="contactFormInterest" multiple="multiple">
+            <option value="Dental Implant">Dental Implant</option>
+            <option value="Surgical Components">Surgical Components</option>
+            <option value="Prosthetics">Prosthetics</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid-item large--one-third small--one-whole"></div>
+      <div class="grid-item large--one-whole">
+        <label for="contactFormMessage" class="hidden-label">{{ 'contact.form.message' | t }}</label>
+        <textarea rows="10" id="contactFormMessage" name="contact[body]" placeholder="{{ 'contact.form.message' | t }}">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+        <input type="submit" class="btn right" value="{{ 'contact.form.send' | t }}">
+      </div>
+      </div>
+
+    {% endform %}
+  </div>
+  {% else %}
+  <div class="grid-item large--two-thirds">
+
+    <h1 class="page-title">{{ page.title }}</h1>
+
+    <div class="rte">
+      {{ page.content }}
+    </div>
+
+  </div>
+
+  <div class="grid-item large--one-third">
+    {% section 'side-bar' %}
+  </div>
+  {% endif %}
+
+</div>
