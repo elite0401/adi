@@ -198,7 +198,7 @@ snippets/product-list-item.liquid:
 snippets/related-product-other.liquid:
   development: 2018-03-14T21:23:15-04:00   66560fa8bf4d9dcbe50b63b8021bf747
 snippets/related-products-tags.liquid:
-  development: 2018-08-10T15:24:58-04:00   7187e4da13b01d27b31f19ee060a3269
+  development: 2018-10-16T22:23:27-04:00   73b613738eeddae8e4bb2f90c65ea555
 snippets/related-products.liquid:
   development: 2016-12-29T00:31:29-05:00   fd690eff6367b96fca61f04fa7a14a89
 snippets/related-prosthetic-products-tags.liquid:

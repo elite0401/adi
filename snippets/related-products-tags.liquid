@@ -114,8 +114,15 @@
         {% include 'product-grid-item' %}
         {% assign product = all_products['th3005'] %}
         {% include 'product-grid-item' %}
-        {% endif %}
+        {% assign product = all_products['3-2-blue-magic-analog'] %}
+        {% include 'product-grid-item' %}
+        {% assign product = all_products['4-5-gt'] %}
+        {% include 'product-grid-item' %}
+        {% assign product = all_products['5-7-gt'] %}
+        {% include 'product-grid-item' %}
+        {% else %}
         {{ related_items }}
+        {% endif %}
       </div>
     </div>
   </aside>
