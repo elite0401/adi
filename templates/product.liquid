@@ -14,62 +14,65 @@
         
         {% if product.images.size > 1 %}
           <ul class="product-photo-thumbs grid-uniform" id="productThumbs">
-            {% for image in product.images %}
-            	{% if product.id == 4842146630 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 or product.id == 4842152454 or product.id == 4842259078 %}
-            		<!-- 3.3 STRAIGHT WAL , 3.7 Tapper, 4.7 straight wal, 4.7 Taper, 3.7 Straight, 5.7XL Taper -->
-            		{% if forloop.first == true %}
-                  <li class="grid-item medium-down--one-fifth large--one-fifth">
-                    <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
-                      <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
-                    </a>                        
-                  </li>
-                  <li class="grid-item medium-down--one-fifth large--one-fifth">
-                  </li>
-                  <li class="grid-item medium-down--one-fifth large--one-fifth">
-                  </li>
-                  <li class="grid-item medium-down--one-fifth large--one-fifth">
-                  </li>
-                  <li class="grid-item medium-down--one-fifth large--one-fifth">
-                  </li>
-            		{% else %}
-                  <li class="grid-item medium-down--one-fifth large--one-fifth">
-                    <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
-                      <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
-                    </a>
-                    {% for variant in image.variants %}
-                    <div>{{ variant.title }}</div>
-                    {% endfor %}
-                  </li>
-            		{% endif %}
-            	{% elsif product.id == 179302957081 or product.id == 179304955929 or product.id == 179303186457 or product.id == 210239782937 or product.id == 210240503833 %}
-            		<!-- 3.5GT=179302957081, 4.5GT=179303186457, 5.7GT=179304955929, ORS45, ORS35 -->
-            		{% if forloop.first == false %}
-                  <li class="grid-item medium-down--one-fifth large--one-fifth">
-                    <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
-                      <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
-                    </a>
-                  </li>
-            		{% endif %}
-            	{% elsif product.id == 546164931 %}
-            		<!-- 2.4 SKINNY -->
-            		  {% if forloop.index == 2 %}
-                    <li class="grid-item medium-down--one-quarter large--one-quarter"></li>
-                    <li class="grid-item medium-down--one-quarter large--one-quarter"></li>
-                    <li class="grid-item medium-down--one-quarter large--one-quarter"></li>
-        		  {% endif %}	
-                <li class="grid-item medium-down--one-quarter large--one-quarter">
-                  <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
-                    <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
-                  </a>
-                </li>
-            	{% else %}
+            {% unless product.id == 179302858777 %}
+              <!-- when product is not 3.2 Tapered -->
+              {% for image in product.images %}
+              	{% if product.id == 4842146630 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 or product.id == 4842152454 or product.id == 4842259078 %}
+              		<!-- 3.3 STRAIGHT WAL , 3.7 Tapper, 4.7 straight wal, 4.7 Taper, 3.7 Straight, 5.7XL Taper -->
+              		{% if forloop.first == true %}
+                    <li class="grid-item medium-down--one-fifth large--one-fifth">
+                      <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
+                        <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+                      </a>                        
+                    </li>
+                    <li class="grid-item medium-down--one-fifth large--one-fifth">
+                    </li>
+                    <li class="grid-item medium-down--one-fifth large--one-fifth">
+                    </li>
+                    <li class="grid-item medium-down--one-fifth large--one-fifth">
+                    </li>
+                    <li class="grid-item medium-down--one-fifth large--one-fifth">
+                    </li>
+              		{% else %}
+                    <li class="grid-item medium-down--one-fifth large--one-fifth">
+                      <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
+                        <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+                      </a>
+                      {% for variant in image.variants %}
+                      <div>{{ variant.title }}</div>
+                      {% endfor %}
+                    </li>
+              		{% endif %}
+              	{% elsif product.id == 179302957081 or product.id == 179304955929 or product.id == 179303186457 or product.id == 210239782937 or product.id == 210240503833 %}
+              		<!-- 3.5GT=179302957081, 4.5GT=179303186457, 5.7GT=179304955929, ORS45, ORS35 -->
+              		{% if forloop.first == false %}
+                    <li class="grid-item medium-down--one-fifth large--one-fifth">
+                      <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
+                        <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+                      </a>
+                    </li>
+              		{% endif %}
+              	{% elsif product.id == 546164931 %}
+              		<!-- 2.4 SKINNY -->
+              		  {% if forloop.index == 2 %}
+                      <li class="grid-item medium-down--one-quarter large--one-quarter"></li>
+                      <li class="grid-item medium-down--one-quarter large--one-quarter"></li>
+                      <li class="grid-item medium-down--one-quarter large--one-quarter"></li>
+          		  {% endif %}	
                   <li class="grid-item medium-down--one-quarter large--one-quarter">
                     <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
                       <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
                     </a>
                   </li>
-            	{% endif %}
-            {% endfor %}
+              	{% else %}
+                    <li class="grid-item medium-down--one-quarter large--one-quarter">
+                      <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
+                        <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+                      </a>
+                    </li>
+              	{% endif %}
+              {% endfor %}
+            {% endunless %}
           </ul>
         {% endif %}
 
@@ -174,6 +177,23 @@
 {% endif %}
 
 {% if product.id == 179302858777 %}
+  <div class="grid-uniform variant-swatch">
+  {% for variant in product.variants %}
+    {% assign img = variant | img_url: '200x200' %}
+    {% for image in product.images %}
+      {% assign alt = image.alt | plus:0 %}
+      {% if alt == variant.id %}
+        {% assign img = image.src | img_url: '200x200' %}
+      {% endif %}
+    {% endfor %}
+  <div class="grid-item large--one-fifth small--one-half">
+    <a href="javascript:void(0);" class="text-center" data-variant="{{variant.id}}">
+      <img src="{{ img }}" data-src="{{ variant | img_url: '200x200' }}" />
+      <div>{{ variant.option1 }} {{ variant.option2 }}</div>
+    </a>
+  </div>
+  {% endfor %}
+  </div>
   <div style="margin-top: 20px;">
     <img style="width: 100%;" alt="" src="{{ 'ADI_BlueMagicSystem-02.jpg' | asset_url }}" />
   </div>
@@ -188,6 +208,44 @@
     </div>
   </a>
   <br/><br/>
+
+  {% comment %}
+  Place this in your product.liquid template, at the bottom.
+  {% endcomment %}
+  {% if product.variants.size > 1 %}
+  <script>
+    var variantImages = {},
+      thumbnails,
+      variant,
+      variantImage,
+      optionValue,
+      productOptions = [];
+      {% for variant in product.variants %}
+         variant = {{ variant | json }};
+         if ( typeof variant.featured_image !== 'undefined' && variant.featured_image !== null ) {
+           variantImage =  variant.featured_image.src.split('?')[0].replace(/http(s)?:/,'');
+           variantImages[variantImage] = variantImages[variantImage] || {};
+           {% for option in product.options %}
+           
+             {% assign option_value = variant.options[forloop.index0] %}
+             {% assign option_key = 'option-' | append: forloop.index0 %}
+            
+             if (typeof variantImages[variantImage][{{ option_key | json }}] === 'undefined') {
+               variantImages[variantImage][{{ option_key | json }}] = {{ option_value | json }};
+             }
+             else {
+               var oldValue = variantImages[variantImage][{{ option_key | json }}];
+               if ( oldValue !== null && oldValue !== {{ option_value | json }} )  {
+                 variantImages[variantImage][{{ option_key | json }}] = null;
+               }
+             }
+           {% endfor %}
+         }
+         productOptions.push(variant);
+      {% endfor %}
+  </script> 
+  {% endif %}
+
 {% endif %}
 
 <!-- 2.4 SKINNY, 3.0 GT, 3.5 GT, 3.3 Straight, 3.7 Straight, 3.7 Tapper -->

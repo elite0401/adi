@@ -106,7 +106,7 @@ assets/respond-proxy.html:
 assets/respond.min.js:
   development: 2018-10-01T03:04:31-04:00   a2684e9b8fa50d6d11c56a9ada068528
 assets/shop.js.liquid:
-  development: 2018-10-02T01:40:40-04:00   5f9048ae0e561f4f0ff3603e2140528e
+  development: 2018-10-24T15:06:37-04:00   f723220e0987038321c887cb1ef1fbbc
 assets/slide_1.gif:
   development: 2018-10-01T03:04:32-04:00   19004d851218ca3ddd43836753b09b81
 assets/slide_2.gif:
@@ -118,7 +118,7 @@ assets/slide_5.gif:
 assets/slide_6.gif:
   development: 2018-10-01T03:04:34-04:00   9c9e72ae77c1580d037e95176b9641c0
 assets/timber.scss.liquid:
-  development: 2018-10-03T10:19:03-04:00   808746a873f32e461936bf6a85740a0a
+  development: 2018-10-24T15:25:47-04:00   a18e3928f0e9f783b0b93ded9c4dfe19
 config/settings_data.json:
   development: 2018-02-03T01:24:17-05:00   61ae5ac4c077ebe1d926782b6fd3f201
 config/settings_schema.json:
@@ -274,6 +274,6 @@ templates/page.shop_index.liquid:
 templates/password.liquid:
   development: 2018-10-01T03:04:37-04:00   06c906a44901cdf14e5ebd35d9d44c22
 templates/product.liquid:
-  development: 2018-10-01T03:04:37-04:00   006a06c1d2efa01ee0b08e0ddaf62d12
+  development: 2018-10-24T15:23:39-04:00   6397c2661f30732b2a09a29c2df2966d
 templates/search.liquid:
   development: 2018-10-01T03:04:37-04:00   fbd64c43c245c1fc343bbc4c28703fb0
