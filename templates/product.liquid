@@ -14,7 +14,7 @@
         
         {% if product.images.size > 1 %}
           <ul class="product-photo-thumbs grid-uniform" id="productThumbs">
-            {% unless product.id == 179302858777 %}
+            {% unless product.id == 179302858777 or product.id == 179302957081 %}
               <!-- when product is not 3.2 Tapered -->
               {% for image in product.images %}
               	{% if product.id == 4842146630 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 or product.id == 4842152454 or product.id == 4842259078 %}
@@ -176,6 +176,19 @@
     </div>
 {% endif %}
 
+{% if product.id == 179302957081 %}
+  <div class="grid-uniform variant-swatch">
+  {% for variant in product.variants %}
+  <div class="grid-item large--one-fifth small--one-half">
+    <a href="javascript:void(0);" class="text-center" data-variant="{{variant.id}}">
+      <img src="{{ variant | img_url: '200x200' }}" data-src="{{ variant | img_url: '200x200' }}" />
+      <div>{{ variant.option1 }} {{ variant.option2 }}</div>
+    </a>
+  </div>
+  {% endfor %}
+  </div>
+{% endif %}
+
 {% if product.id == 179302858777 %}
   <div class="grid-uniform variant-swatch">
   {% for variant in product.variants %}
@@ -199,7 +212,8 @@
   </div>
   <br/><br/>
   <div>
-    <iframe src="https://player.vimeo.com/video/289147875?title=adi" width="936" height="527" style="max-width: 100%; border: 2px solid #1c81b7;border-radius: 5px;" allowfullscreen="allowfullscreen"></iframe>
+    <img src="{{ 'blue-magic-video-overlay.png' | asset_url }}" id="blue-magic-video-overlay" />
+    <iframe id="blue-magic-video" src="https://player.vimeo.com/video/289147875?title=adi" width="936" height="527" style="max-width: 100%; border: 2px solid #1c81b7;border-radius: 5px;" allowfullscreen="allowfullscreen"></iframe>
   </div>
   <br><br>
   <a href="/collections/all/drills">
@@ -208,7 +222,9 @@
     </div>
   </a>
   <br/><br/>
+{% endif %}
 
+{% if product.id == 179302957081 or product.id == 179302858777 %}
   {% comment %}
   Place this in your product.liquid template, at the bottom.
   {% endcomment %}
@@ -243,6 +259,7 @@
          }
          productOptions.push(variant);
       {% endfor %}
+      console.log(variantImages);
   </script> 
   {% endif %}
 

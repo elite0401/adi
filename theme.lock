@@ -60,9 +60,11 @@ assets/animation_r6_00000.jpg:
 assets/arrow-down.svg.liquid:
   development: 2018-10-01T03:04:26-04:00   8ef09e0a76c55257323a2545c5fd0446
 assets/banner-product-bg.png:
-  development: 2018-10-01T13:05:17-04:00   3f12a9a96deee67802648f4f7c87f88b
+  development: 2018-11-02T16:44:16-04:00   3f12a9a96deee67802648f4f7c87f88b
+assets/blue-magic-video-overlay.png:
+  development: 2018-10-28T11:51:44-04:00   69bd14d52f5cff3daa4f343fd0ba3beb
 assets/body-bg.jpg:
-  development: 2018-10-01T03:38:24-04:00   2dcac74caf82d53f5374f7cb7d156120
+  development: 2018-11-02T16:44:20-04:00   2dcac74caf82d53f5374f7cb7d156120
 assets/evenZoom.js:
   development: 2018-10-01T03:04:26-04:00   f53973856e7fb8942032c972bccc7eb2
 assets/fastclick.min.js:
@@ -72,7 +74,7 @@ assets/favicon.png:
 assets/handlebars.min.js:
   development: 2018-10-01T03:04:27-04:00   b3c11508a224ee83f86e2fc6491e9751
 assets/header-bg.png:
-  development: 2018-10-01T05:38:10-04:00   3b82a191315235506f2db76441c2c20a
+  development: 2018-11-02T16:44:17-04:00   3b82a191315235506f2db76441c2c20a
 assets/icons.eot:
   development: 2018-10-01T03:04:27-04:00   6ca7910be4907c6384489a55bd7e3062
 assets/icons.json:
@@ -89,6 +91,8 @@ assets/jquery.fancybox.min.js:
   development: 2018-10-01T03:04:28-04:00   b762d7a222031899a8b3d8fa8e6a21cf
 assets/jquery.flexslider.min.js:
   development: 2018-10-01T03:04:28-04:00   9ec3c315b67f434aabc4da58eabc6c3a
+assets/jquery.vimeo.api.min.js:
+  development: 2018-10-26T15:17:29-04:00   0f5f3c6c1ccee3cdb6c1c2da0a1ecd6c
 assets/jquery.zoom.min.js:
   development: 2018-10-01T03:04:30-04:00   39dbe5d6099efe7c2e702636b8d0dcda
 assets/logo.png:
@@ -118,13 +122,13 @@ assets/slide_5.gif:
 assets/slide_6.gif:
   development: 2018-10-01T03:04:34-04:00   9c9e72ae77c1580d037e95176b9641c0
 assets/timber.scss.liquid:
-  development: 2018-10-24T15:25:47-04:00   a18e3928f0e9f783b0b93ded9c4dfe19
+  development: 2018-10-28T11:56:29-04:00   4e8810cbcd870b5085871bd56b2c7462
 config/settings_data.json:
   development: 2018-02-03T01:24:17-05:00   61ae5ac4c077ebe1d926782b6fd3f201
 config/settings_schema.json:
   development: 2018-10-01T03:04:37-04:00   cea97e2116b8c12a590ab9ee6b9b44a4
 layout/theme.liquid:
-  development: 2018-10-03T15:07:13-04:00   a01665a2dc090e8cf57a3349ee3cb1dd
+  development: 2018-10-28T11:59:21-04:00   9dfa8ba5489c44a96e6cbb8ce02368f4
 locales/de.json:
   development: 2018-10-01T03:04:34-04:00   9b33e5d7a56908a24f887bacda9d8c93
 locales/en.default.json:
@@ -274,6 +278,6 @@ templates/page.shop_index.liquid:
 templates/password.liquid:
   development: 2018-10-01T03:04:37-04:00   06c906a44901cdf14e5ebd35d9d44c22
 templates/product.liquid:
-  development: 2018-10-26T13:32:48-04:00   ec866f45e5b0560908756db482c9801f
+  development: 2018-11-02T16:59:29-04:00   70b0a290b00e97d3cb89ba508a8b4eaa
 templates/search.liquid:
   development: 2018-10-01T03:04:37-04:00   fbd64c43c245c1fc343bbc4c28703fb0

@@ -58,6 +58,7 @@
 
   {{ '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' | script_tag }}
   {{ 'jquery.fancybox.min.js' | asset_url | script_tag }}
+  {{ 'jquery.vimeo.api.min.js' | asset_url | script_tag }}
   {{ 'evenZoom.js' | asset_url | script_tag }}
   {{ 'modernizr.min.js' | asset_url | script_tag }}
   <script src="http://vjs.zencdn.net/6.2.8/video.js"></script>
@@ -398,6 +399,12 @@
     });
     $("#evenZoom_id").evenZoom({
       lensPinningDistance: 20
+    });
+    $('#blue-magic-video-overlay').on('click', function() {
+      $('#blue-magic-video').vimeo("seekTo", 509);
+      $('#blue-magic-video').vimeo("play");
+      $('#blue-magic-video').show();
+      $('#blue-magic-video-overlay').hide();
     });
   });
 </script>
