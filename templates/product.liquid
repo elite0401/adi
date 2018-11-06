@@ -179,9 +179,16 @@
 {% if product.id == 179302957081 %}
   <div class="grid-uniform variant-swatch">
   {% for variant in product.variants %}
+    {% assign img = variant | img_url: '200x200' %}
+    {% for image in product.images %}
+      {% assign alt = image.alt | plus:0 %}
+      {% if alt == variant.id %}
+        {% assign img = image.src | img_url: '200x200' %}
+      {% endif %}
+    {% endfor %}
   <div class="grid-item large--one-fifth small--one-half">
     <a href="javascript:void(0);" class="text-center" data-variant="{{variant.id}}">
-      <img src="{{ variant | img_url: '200x200' }}" data-src="{{ variant | img_url: '200x200' }}" />
+      <img src="{{ img }}" data-src="{{ variant | img_url: '200x200' }}" />
       <div>{{ variant.option1 }} {{ variant.option2 }}</div>
     </a>
   </div>

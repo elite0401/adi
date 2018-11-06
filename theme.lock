@@ -278,6 +278,6 @@ templates/page.shop_index.liquid:
 templates/password.liquid:
   development: 2018-10-01T03:04:37-04:00   06c906a44901cdf14e5ebd35d9d44c22
 templates/product.liquid:
-  development: 2018-11-02T16:59:29-04:00   70b0a290b00e97d3cb89ba508a8b4eaa
+  development: 2018-11-06T03:52:12-05:00   181e257dce2d78eb6f1bdbb96bf8f34c
 templates/search.liquid:
   development: 2018-10-01T03:04:37-04:00   fbd64c43c245c1fc343bbc4c28703fb0
