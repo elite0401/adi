@@ -4582,11 +4582,15 @@ h2 {
   }
 }
 
-#blue-magic-video-overlay {
-  width: 100%;
-  cursor: pointer;
-}
-
-#blue-magic-video {
-  display: none;
+#blue-magic-video-wrapper {
+  #blue-magic-video-overlay {
+    width: 100%;
+    cursor: pointer;
+  }
+  .video-wrapper {
+    display: none;
+    #blue-magic-video {
+      display: none;
+    }
+  }
 }
