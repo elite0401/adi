@@ -11,10 +11,10 @@
           {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
           <img id="productPhotoImg" src="{{ featured_image | img_url: 'large' }}" alt="{{ featured_image.alt | escape }}" {% if settings.product_image_zoom_enable %} data-zoom="{{ featured_image | img_url: '1024x1024' }}"{% endif %}>
         </div>
-        
+
         {% if product.images.size > 1 %}
           <ul class="product-photo-thumbs grid-uniform" id="productThumbs">
-            {% unless product.id == 179302858777 or product.id == 179302957081 %}
+            {% unless product.id == 179302858777 or product.id == 179302957081 or product.id == 179304955929 or product.id == 4842146630 or product.id == 4842152454 %}
               <!-- when product is not 3.2 Tapered -->
               {% for image in product.images %}
               	{% if product.id == 4842146630 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 or product.id == 4842152454 or product.id == 4842259078 %}
@@ -23,7 +23,7 @@
                     <li class="grid-item medium-down--one-fifth large--one-fifth">
                       <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
                         <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
-                      </a>                        
+                      </a>
                     </li>
                     <li class="grid-item medium-down--one-fifth large--one-fifth">
                     </li>
@@ -58,7 +58,7 @@
                       <li class="grid-item medium-down--one-quarter large--one-quarter"></li>
                       <li class="grid-item medium-down--one-quarter large--one-quarter"></li>
                       <li class="grid-item medium-down--one-quarter large--one-quarter"></li>
-          		  {% endif %}	
+          		  {% endif %}
                   <li class="grid-item medium-down--one-quarter large--one-quarter">
                     <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
                       <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
@@ -176,7 +176,7 @@
     </div>
 {% endif %}
 
-{% if product.id == 179302957081 %}
+{% if product.id == 179302957081 or product.id == 179304955929 or product.id == 4842146630 or product.id == 4842152454 %}
   <div class="grid-uniform variant-swatch">
   {% for variant in product.variants %}
     {% assign img = variant | img_url: '200x200' %}
@@ -234,7 +234,7 @@
   <br/><br/>
 {% endif %}
 
-{% if product.id == 179302957081 or product.id == 179302858777 %}
+{% if product.id == 179302957081 or product.id == 179302858777 or product.id == 179304955929 or product.id == 4842146630 or product.id == 4842152454 %}
   {% comment %}
   Place this in your product.liquid template, at the bottom.
   {% endcomment %}
@@ -252,10 +252,10 @@
            variantImage =  variant.featured_image.src.split('?')[0].replace(/http(s)?:/,'');
            variantImages[variantImage] = variantImages[variantImage] || {};
            {% for option in product.options %}
-           
+
              {% assign option_value = variant.options[forloop.index0] %}
              {% assign option_key = 'option-' | append: forloop.index0 %}
-            
+
              if (typeof variantImages[variantImage][{{ option_key | json }}] === 'undefined') {
                variantImages[variantImage][{{ option_key | json }}] = {{ option_value | json }};
              }
@@ -270,7 +270,7 @@
          productOptions.push(variant);
       {% endfor %}
       console.log(variantImages);
-  </script> 
+  </script>
   {% endif %}
 
 {% endif %}
@@ -400,7 +400,7 @@
       <img style="width: 100%;" alt="" src="{{ 'XL5.7_Taper_Implant_original.jpg' | asset_url }}" />
     </div>
   </a>
-{% endif %}  
+{% endif %}
 
 {{ 'option_selection.js' | shopify_asset_url | script_tag }}
 
@@ -527,5 +527,3 @@
 		{% include 'related-products-tags' %}
 	{% endif %}
 {% endif %}
-
-
