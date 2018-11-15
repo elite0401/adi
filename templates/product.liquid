@@ -14,7 +14,7 @@
 
         {% if product.images.size > 1 %}
           <ul class="product-photo-thumbs grid-uniform" id="productThumbs">
-            {% unless product.id == 179302858777 or product.id == 179302957081 or product.id == 179304955929 or product.id == 4842146630 or product.id == 4842152454 %}
+            {% unless product.id == 179302858777 or product.id == 179302957081 or product.id == 179304955929 or product.id == 4842146630 or product.id == 4842152454 or product.id == 546164931 %}
               <!-- when product is not 3.2 Tapered -->
               {% for image in product.images %}
               	{% if product.id == 4842146630 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 or product.id == 4842152454 or product.id == 4842259078 %}
@@ -76,15 +76,6 @@
           </ul>
         {% endif %}
 
-        {% if product.id == 546164931 %}
-        <h4 style="text-align: justify; margin: 310px 0 0 0;border: 6px solid #307496; border-bottom: 0; padding: 0 5px;">Bone Compression illustration using the 3.7 Tapered implant with the Skinny Bone Drilling System</h4>
-        <a id="gif_link" href="{{ 'animation.gif' | asset_url }}" target="_blank">
-          <img src="{{ 'animation_r6_00000.jpg' | asset_url }}">
-        </a>
-        <div style="display: none;">
-          <div id="gif_content"><img src="{{ 'animation.gif' | asset_url }}"></div>
-        </div>
-        {% endif %}
       </div>
     </div>
   </div>
@@ -151,9 +142,11 @@
       </form>
       <hr>
     </div>
+    {% unless product.id == 546164931 %}
     <div class="product-description rte" itemprop="description">
       {{ product.description }}
     </div>
+    {% endunless %}
     {% if settings.social_sharing_products %}
       {% include 'social-sharing' %}
     {% endif %}
@@ -176,7 +169,7 @@
     </div>
 {% endif %}
 
-{% if product.id == 179302957081 or product.id == 179304955929 or product.id == 4842146630 or product.id == 4842152454 %}
+{% if product.id == 179302957081 or product.id == 179304955929 or product.id == 4842146630 or product.id == 4842152454 or product.id == 546164931 %}
   <div class="grid-uniform variant-swatch">
   {% for variant in product.variants %}
     {% assign img = variant | img_url: '200x200' %}
@@ -234,7 +227,29 @@
   <br/><br/>
 {% endif %}
 
-{% if product.id == 179302957081 or product.id == 179302858777 or product.id == 179304955929 or product.id == 4842146630 or product.id == 4842152454 %}
+{% if product.id == 546164931 %}
+<div class="grid">
+  <div class="grid-item large--three-fifths">
+    <h4 style="width:calc(100% - 8px);text-align: justify; margin: 30px 0 0 0;border: 10px solid #307496; border-bottom: 0; padding: 0 5px;">Bone Compression illustration using the 3.7 Tapered implant with the Skinny Bone Drilling System</h4>
+    <a id="gif_link" href="{{ 'animation.gif' | asset_url }}" target="_blank">
+      <img src="{{ 'animation_r6_00000.jpg' | asset_url }}">
+    </a>
+    <div style="display: none;">
+      <div id="gif_content"><img src="{{ 'animation.gif' | asset_url }}"></div>
+    </div>
+  </div>
+  <div class="grid-item large--two-fifths">
+    {% if product.id == 546164931 %}
+    <div class="product-description rte" itemprop="description">
+      <br>
+      {{ product.description }}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+
+{% if product.id == 179302957081 or product.id == 179302858777 or product.id == 179304955929 or product.id == 4842146630 or product.id == 4842152454 or product.id == 546164931 %}
   {% comment %}
   Place this in your product.liquid template, at the bottom.
   {% endcomment %}
