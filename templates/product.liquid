@@ -14,7 +14,7 @@
 
         {% if product.images.size > 1 %}
           <ul class="product-photo-thumbs grid-uniform" id="productThumbs">
-            {% unless product.id == 179302858777 or product.id == 179302957081 or product.id == 179304955929 or product.id == 4842146630 or product.id == 4842152454 or product.id == 546164931 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 %}
+            {% unless product.id == 179302858777 or product.id == 179302957081 or product.id == 179304955929 or product.id == 4842146630 or product.id == 4842152454 or product.id == 546164931 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 or product.id == 4842259078 %}
               <!-- when product is not 3.2 Tapered -->
               {% for image in product.images %}
               	{% if product.id == 4842146630 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 or product.id == 4842152454 or product.id == 4842259078 %}
@@ -142,7 +142,7 @@
       </form>
       <hr>
     </div>
-    {% unless product.id == 546164931 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 %}
+    {% unless product.id == 546164931 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 or product.id == 4842259078 %}
     <div class="product-description rte" itemprop="description">
       {{ product.description }}
     </div>
@@ -169,7 +169,7 @@
     </div>
 {% endif %}
 
-{% if product.id == 179302957081 or product.id == 179304955929 or product.id == 4842146630 or product.id == 4842152454 or product.id == 546164931 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 %}
+{% if product.id == 179302957081 or product.id == 179304955929 or product.id == 4842146630 or product.id == 4842152454 or product.id == 546164931 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 or product.id == 4842259078 %}
   <div class="grid-uniform variant-swatch">
   {% for variant in product.variants %}
     {% assign img = variant | img_url: '200x200' %}
@@ -247,7 +247,7 @@
 </div>
 {% endif %}
 
-{% if product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 %}
+{% if product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 or product.id == 4842259078 %}
 <div class="grid">
   <div class="grid-item large--three-fifths">
     &nbsp;
@@ -261,7 +261,7 @@
 </div>
 {% endif %}
 
-{% if product.id == 179302957081 or product.id == 179302858777 or product.id == 179304955929 or product.id == 4842146630 or product.id == 4842152454 or product.id == 546164931 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 %}
+{% if product.id == 179302957081 or product.id == 179302858777 or product.id == 179304955929 or product.id == 4842146630 or product.id == 4842152454 or product.id == 546164931 or product.id == 4842179526 or product.id == 4842228870 or product.id == 4842243270 or product.id == 4842259078 %}
   {% comment %}
   Place this in your product.liquid template, at the bottom.
   {% endcomment %}
