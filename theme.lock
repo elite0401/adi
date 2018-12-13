@@ -129,8 +129,10 @@ config/settings_data.json:
   development: 2018-02-03T01:24:17-05:00   61ae5ac4c077ebe1d926782b6fd3f201
 config/settings_schema.json:
   development: 2018-10-01T03:04:37-04:00   cea97e2116b8c12a590ab9ee6b9b44a4
+layout/backup_theme.liquid:
+  development: 2018-11-29T15:46:47-05:00   517f179cd7f49ec210e9f12503bc5fca
 layout/theme.liquid:
-  development: 2018-11-06T12:56:16-05:00   517f179cd7f49ec210e9f12503bc5fca
+  development: 2018-11-29T15:46:53-05:00   62730d40673e15d688871919b2823e5a
 locales/de.json:
   development: 2018-10-01T03:04:34-04:00   9b33e5d7a56908a24f887bacda9d8c93
 locales/en.default.json:
@@ -151,6 +153,12 @@ sections/side-bar.liquid:
   development: 2018-11-06T12:52:08-05:00   56b5437eb203c4aa3bc77b49e86a9f41
 sections/vimeo_video.liquid:
   development: 2018-11-06T12:52:07-05:00   e42d058b97bd26ddff5fb1e1bf61d9a5
+snippets/SEOManager-404.liquid:
+  development: 2018-12-10T15:55:33-05:00   defe854aeb171256b58b3df4ec3243be
+snippets/SEOManager.liquid:
+  development: 2018-12-10T15:55:31-05:00   b808ca61cbe830ff953179e316a010db
+snippets/SEOMetaManager.liquid:
+  development: 2018-12-10T15:55:32-05:00   63248d1bdd7cdcb0e8ba9bfd7ea6e95a
 snippets/advanced-tag-loop.liquid:
   development: 2018-10-01T03:04:34-04:00   cd9725f80a883782e2de4fd1f652079c
 snippets/ajax-cart-template.liquid:
@@ -171,6 +179,8 @@ snippets/collection-views.liquid:
   development: 2018-10-01T03:04:35-04:00   d442980f19d4587637ddbf82151bc6a2
 snippets/comment.liquid:
   development: 2018-10-01T03:04:35-04:00   f05ec37200b573bd7af44200c40e441c
+snippets/evm-seo.liquid:
+  development: 2018-11-29T15:46:47-05:00   a6095af0718613377c1701d4e1970909
 snippets/featured-collection.liquid:
   development: 2018-10-01T03:04:35-04:00   32bb9d0aa40741d14b8ae53f1779b781
 snippets/featured-row.liquid:
@@ -234,7 +244,9 @@ snippets/toggle-filters.liquid:
 snippets/twitter-card.liquid:
   development: 2018-10-01T03:04:36-04:00   1b219a4aa1cc100bd97491d69b193c50
 templates/404.liquid:
-  development: 2018-10-01T03:04:36-04:00   2931cfb31594cb6c60dd6055defdb260
+  development: 2018-12-10T15:55:35-05:00   3d1b6b548f8d6fdef5cd3f900dc30dca
+templates/404.preSEOManager.liquid:
+  development: 2018-12-10T15:55:34-05:00   2931cfb31594cb6c60dd6055defdb260
 templates/article.liquid:
   development: 2018-10-01T03:04:36-04:00   cc866fa2e2ebd97ef39ef95851ca4509
 templates/blog.liquid:
@@ -281,5 +293,9 @@ templates/password.liquid:
   development: 2018-10-01T03:04:37-04:00   06c906a44901cdf14e5ebd35d9d44c22
 templates/product.liquid:
   development: 2018-11-19T12:45:50-05:00   f934b883c80ce83313c3c1d3ef24f21d
+templates/search.SEOManagerProductMeta.liquid:
+  development: 2018-12-10T15:55:33-05:00   fdb1d439d0ab4791f7782eb8a1475af0
+templates/search.SEOManagerTags.liquid:
+  development: 2018-12-10T15:55:33-05:00   d1422bdd2fb57c8f346bfd1bf42818f4
 templates/search.liquid:
   development: 2018-10-01T03:04:37-04:00   fbd64c43c245c1fc343bbc4c28703fb0

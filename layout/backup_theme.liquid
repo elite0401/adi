@@ -5,7 +5,6 @@
 <!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-touch no-js"> <!--<![endif]-->
 <head>
-                    {% include 'evm-seo' %}
 
   <!-- Basic page needs ================================================== -->
   <meta charset="utf-8">
@@ -16,12 +15,12 @@
   {% endif %}
 
   <!-- Title and description ================================================== -->
-  {% comment %}<title>
+  <title>
   {{ page_title }}{% if current_tags %}{% assign current_tags_joined = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: current_tags_joined }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
-  </title>{% endcomment %}
+  </title>
 
   {% if page_description %}
-  {% comment %} <meta name="description" content="{{ page_description | escape }}"> {% endcomment %}
+  <meta name="description" content="{{ page_description | escape }}">
   {% endif %}
 
   <!-- Product meta ================================================== -->
