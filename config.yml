@@ -1,6 +1,0 @@
-development:
-  password: 7101a631cefe70d32a14bff80fb295f9
-  theme_id: "39155400817"
-  store: americandentalimplant.myshopify.com
-  ignore_files:
-    - config/settings_data.json
