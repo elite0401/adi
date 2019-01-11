@@ -16,8 +16,13 @@
   {% endif %}
 
   <!-- Title and description ================================================== -->
-{% include 'SEOManager' %}
+  {% comment %}<title>
+  {{ page_title }}{% if current_tags %}{% assign current_tags_joined = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: current_tags_joined }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+  </title>{% endcomment %}
 
+  {% if page_description %}
+  {% comment %} <meta name="description" content="{{ page_description | escape }}"> {% endcomment %}
+  {% endif %}
 
   <!-- Product meta ================================================== -->
   {% include 'open-graph-tags' %}
@@ -70,7 +75,6 @@
         <div class="grid-item large--two-quarters">
           {% if template == 'index' %}
             <h1 class="header-logo" itemscope itemtype="http://schema.org/Organization">
-              <span>{{ shop.name }}</span>
           {% else %}
             <div class="h1 header-logo" itemscope itemtype="http://schema.org/Organization">
           {% endif %}

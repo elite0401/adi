@@ -124,7 +124,7 @@ assets/slide_5.gif:
 assets/slide_6.gif:
   development: 2018-10-01T03:04:34-04:00   9c9e72ae77c1580d037e95176b9641c0
 assets/timber.scss.liquid:
-  development: 2018-11-06T12:56:54-05:00   bf9f6721bcc461315bcc872ee094669e
+  development: 2019-01-11T15:05:27-05:00   b66f5a56ff87e4c0f5e7aeb725598cb9
 config/settings_data.json:
   development: 2018-02-03T01:24:17-05:00   61ae5ac4c077ebe1d926782b6fd3f201
 config/settings_schema.json:
@@ -132,7 +132,9 @@ config/settings_schema.json:
 layout/backup_theme.liquid:
   development: 2018-11-29T15:46:47-05:00   517f179cd7f49ec210e9f12503bc5fca
 layout/theme.liquid:
-  development: 2018-11-29T15:46:53-05:00   62730d40673e15d688871919b2823e5a
+  development: 2019-01-11T15:06:40-05:00   cc159c33e041cdb9b7998e7e30aabdf3
+layout/theme.preSEOManager.liquid:
+  development: 2019-01-04T16:34:35-05:00   62730d40673e15d688871919b2823e5a
 locales/de.json:
   development: 2018-10-01T03:04:34-04:00   9b33e5d7a56908a24f887bacda9d8c93
 locales/en.default.json:
@@ -146,9 +148,9 @@ locales/pt-BR.json:
 locales/pt-PT.json:
   development: 2018-10-01T03:04:34-04:00   4c18963ac58b0341c6db2e368ad9a404
 sections/featured-promotions.liquid:
-  development: 2018-11-06T12:52:08-05:00   19eeb730f4f72b23cdb11c99a43d3e0c
+  development: 2019-01-11T14:54:12-05:00   4e2a7ba7adeb173069fa7055b4454b88
 sections/image.liquid:
-  development: 2018-11-06T12:52:07-05:00   01c53c31b31018f9e945aff68754b1d1
+  development: 2019-01-11T14:47:32-05:00   337bf43951c0cae2e2c7ae2121457709
 sections/side-bar.liquid:
   development: 2018-11-06T12:52:08-05:00   56b5437eb203c4aa3bc77b49e86a9f41
 sections/vimeo_video.liquid:
@@ -292,7 +294,7 @@ templates/page.shop_index.liquid:
 templates/password.liquid:
   development: 2018-10-01T03:04:37-04:00   06c906a44901cdf14e5ebd35d9d44c22
 templates/product.liquid:
-  development: 2018-11-19T12:45:50-05:00   f934b883c80ce83313c3c1d3ef24f21d
+  development: 2019-01-11T14:15:44-05:00   8845f6a17bfd1366a9d98b2581c5fd70
 templates/search.SEOManagerProductMeta.liquid:
   development: 2018-12-10T15:55:33-05:00   fdb1d439d0ab4791f7782eb8a1475af0
 templates/search.SEOManagerTags.liquid:

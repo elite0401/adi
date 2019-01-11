@@ -9,7 +9,7 @@
         <div class="{% if section.settings.rounded_image != blank %}rounded{% endif %}">
           {% if block.settings.image != nil %}
             <img  src="{{ block.settings.image | img_url: '300x' }}"
-                  alt="{{ block.settings.image.alt }}"
+                  alt="{{ block.settings.title }}"
                   data-src="{{ block.settings.image | img_url: '2048x' }}"
                   class="lazyload"
                   data-sizes="auto"

@@ -2140,6 +2140,7 @@ $shareBorderColor: #ececec;
 .header-logo {
   margin: $gutter auto;
   max-width: {{ settings.logo_max_width }}px;
+  font-size: 0;
 
   @include at-query ($min, $large) {
     margin: 15px 0;
@@ -4351,6 +4352,7 @@ Onbroding css
 
 .image_section{
 	padding-bottom:0;
+  position: relative;
   img{
   		margin:0 auto;
         display:block;
@@ -4591,6 +4593,22 @@ h2 {
     display: none;
     #blue-magic-video {
       display: none;
+    }
+  }
+}
+.caption_buttons {
+  width: 100%;
+  text-align: center;
+  bottom: 50px;
+  position: absolute;
+  .btn {
+    &.cta-button {
+      background: rgba(255,255,255,0.5);
+      border: 2px solid #C40000;
+      color: #C40000;
+      &:hover {
+        background: rgba(255,255,255,1);
+      }
     }
   }
 }
