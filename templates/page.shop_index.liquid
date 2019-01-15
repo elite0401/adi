@@ -12,7 +12,7 @@
 <h2 style="text-align: center;">The Greater Taper Series</h2>
 <div class="grid">
   {% for product in collections['the-greater-taper-series'].products %}
-  <div class="grid-item large--one-quarter medium--one-half">
+  <div class="grid-item large--one-quarter medium-down--one-half">
     <a href="{{ product.url }}" class="product-grid-item">
       <div class="product-grid-image">
         <div class="product-grid-image--centered">
@@ -28,12 +28,12 @@
 {% assign green_count = 0 %}
 {% assign red_count = 0 %}
 {% assign gold_count = 0 %}
-<h2 style="text-align: center;">Straight Wall and Taper Series</h2>
+<h2 style="text-align: center;" class="heading">Straight Wall and Taper Series</h2>
 <div class="grid">
   {% for product in collections.all.products  %}
   	{% for tag in product.tags %}
     	{% if tag contains 'green' %}
-    	  <div class="grid-item large--one-quarter medium--one-half">
+    	  <div class="grid-item large--one-quarter medium-down--one-half">
           <a href="{{ product.url }}" class="product-grid-item">
             <div class="product-grid-image">
               <div class="product-grid-image--centered">
@@ -56,7 +56,7 @@
   {% for product in collections.all.products  %}
   	{% for tag in product.tags %}
     	{% if tag contains 'red' %}
-    	  <div class="grid-item large--one-quarter medium--one-half">
+    	  <div class="grid-item large--one-quarter medium-down--one-half">
           <a href="{{ product.url }}" class="product-grid-item">
             <div class="product-grid-image">
               <div class="product-grid-image--centered">
@@ -79,7 +79,7 @@
  {% for product in collections['all'].products  %}
   	{% for tag in product.tags %}
     	{% if tag contains 'gold_new' %}
-    	  <div class="grid-item large--one-quarter medium--one-half">
+    	  <div class="grid-item large--one-quarter medium-down--one-half">
           <a href="{{ product.url }}" class="product-grid-item">
             <div class="product-grid-image">
               <div class="product-grid-image--centered">
@@ -99,7 +99,7 @@
 </div>
 
 <div class="grid">
-	<div class="grid-item large--one-whole medium--one-whole small--one-whole">
+	<div class="grid-item large--one-whole medium-down--one-whole small--one-whole">
     <div class="image_section">
       <img src="https://cdn.shopify.com/s/files/1/0866/5944/files/ADI8-5x11SS7DS4.png?4154447896694283182">
     </div>
@@ -107,7 +107,7 @@
 </div>
 
 <div class="grid">
-	<div class="grid-item large--one-half medium--one-half small--one-whole">
+	<div class="grid-item large--one-half medium-down--one-half small--one-whole">
     <div class="image_section">
       {% if settings.left_image != blank  %}
        <img src="{{ settings.left_image | img_url: 'large' }}">
@@ -117,7 +117,7 @@
     </div>
   </div>
 
-  <div class="grid-item large--one-half medium--one-half small--one-whole">
+  <div class="grid-item large--one-half medium-down--one-half small--one-whole">
     <div class="image_section">
         {% if settings.right_image != blank  %}
         <img src="{{ settings.right_image | img_url: 'large' }}">
@@ -129,7 +129,7 @@
 </div>
 
 <div class="grid">
-  <div class="grid-item large--one-third medium--one-half small-one-whole text-center">
+  <div class="grid-item large--one-third medium---one-half small-one-whole text-center">
     <iframe src="https://player.vimeo.com/video/171624166" width="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     <p><a href="https://vimeo.com/171624166">Replacing a Maxillary Central Incisor with the Skinny 2.4</a> from <a href="https://vimeo.com/adicorp">American Dental Implant Corp.</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
   </div>

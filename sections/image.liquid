@@ -24,6 +24,11 @@
           <a href="{{ section.settings.link }}" class="btn cta-button">{{ section.settings.cta_text }}</a>
         </div>
         {% endif %}
+        {% if section.settings.hidden_text != blank %}
+        <div class="hidden_text">
+          {{ section.settings.hidden_text }}
+        </div>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -44,6 +49,11 @@
         "type": "text",
         "id": "alt_text",
         "label": "Alt Text"
+      },
+      {
+        "type": "richtext",
+        "id": "hidden_text",
+        "label": "SEO hidden text"
       },
       {
         "type": "url",

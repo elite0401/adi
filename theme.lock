@@ -124,7 +124,7 @@ assets/slide_5.gif:
 assets/slide_6.gif:
   development: 2018-10-01T03:04:34-04:00   9c9e72ae77c1580d037e95176b9641c0
 assets/timber.scss.liquid:
-  development: 2019-01-11T15:05:27-05:00   b66f5a56ff87e4c0f5e7aeb725598cb9
+  development: 2019-01-14T22:16:15-05:00   6fb2c65a90c5d695ca5de72f06efaf3a
 config/settings_data.json:
   development: 2018-02-03T01:24:17-05:00   61ae5ac4c077ebe1d926782b6fd3f201
 config/settings_schema.json:
@@ -132,7 +132,7 @@ config/settings_schema.json:
 layout/backup_theme.liquid:
   development: 2018-11-29T15:46:47-05:00   517f179cd7f49ec210e9f12503bc5fca
 layout/theme.liquid:
-  development: 2019-01-11T15:06:40-05:00   cc159c33e041cdb9b7998e7e30aabdf3
+  development: 2019-01-11T15:12:53-05:00   922f2153dec7c8c657c029a013917af1
 layout/theme.preSEOManager.liquid:
   development: 2019-01-04T16:34:35-05:00   62730d40673e15d688871919b2823e5a
 locales/de.json:
@@ -150,7 +150,7 @@ locales/pt-PT.json:
 sections/featured-promotions.liquid:
   development: 2019-01-11T14:54:12-05:00   4e2a7ba7adeb173069fa7055b4454b88
 sections/image.liquid:
-  development: 2019-01-11T14:47:32-05:00   337bf43951c0cae2e2c7ae2121457709
+  development: 2019-01-14T21:29:26-05:00   c5cc51b017c9e2bc1e6fecd69a10c550
 sections/side-bar.liquid:
   development: 2018-11-06T12:52:08-05:00   56b5437eb203c4aa3bc77b49e86a9f41
 sections/vimeo_video.liquid:
@@ -220,9 +220,9 @@ snippets/related-products-tags.liquid:
 snippets/related-products.liquid:
   development: 2018-10-01T03:04:36-04:00   fd690eff6367b96fca61f04fa7a14a89
 snippets/related-prosthetic-products-tags.liquid:
-  development: 2018-10-01T03:04:36-04:00   c9f8e2daca9ef9e83bd99ae137c22ed0
+  development: 2019-01-14T22:14:56-05:00   a5ce9694b4a962aaac662e66a8c7ae84
 snippets/related-surgical-products-tags.liquid:
-  development: 2018-10-01T03:04:36-04:00   10a057d242882640d5429cd1e431da4f
+  development: 2019-01-14T22:13:52-05:00   e7b99435724142087bb919e3970e41c3
 snippets/respond.liquid:
   development: 2018-10-01T03:04:36-04:00   296108cb94e6cb82d515ebb93308ef68
 snippets/search-bar.liquid:
@@ -232,7 +232,7 @@ snippets/search-result-grid.liquid:
 snippets/search-result.liquid:
   development: 2018-10-01T03:04:36-04:00   bb60eb0cbb377f073d21a04f64aa135d
 snippets/site-nav.liquid:
-  development: 2018-11-06T12:52:25-05:00   4844a82d8df10faa2655a0c346825ff8
+  development: 2019-01-11T15:20:13-05:00   4844a82d8df10faa2655a0c346825ff8
 snippets/slider.liquid:
   development: 2018-10-01T03:04:36-04:00   6894f064fd69fd861185eb242e041d9c
 snippets/social-sharing.liquid:
@@ -290,11 +290,11 @@ templates/page.regular-video.liquid:
 templates/page.regular.liquid:
   development: 2018-11-06T12:52:36-05:00   70188834e155f16899ad327156ae38dd
 templates/page.shop_index.liquid:
-  development: 2018-11-06T12:52:38-05:00   5d7c4fa7159b8ba375fa2dcd34fb24da
+  development: 2019-01-14T22:08:14-05:00   0a440e09865847e898059946f3215a61
 templates/password.liquid:
   development: 2018-10-01T03:04:37-04:00   06c906a44901cdf14e5ebd35d9d44c22
 templates/product.liquid:
-  development: 2019-01-11T14:15:44-05:00   8845f6a17bfd1366a9d98b2581c5fd70
+  development: 2019-01-14T11:17:00-05:00   c047b0a82fa5480427f3277682bcc9a9
 templates/search.SEOManagerProductMeta.liquid:
   development: 2018-12-10T15:55:33-05:00   fdb1d439d0ab4791f7782eb8a1475af0
 templates/search.SEOManagerTags.liquid:
