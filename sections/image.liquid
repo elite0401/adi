@@ -24,11 +24,13 @@
           <a href="{{ section.settings.link }}" class="btn cta-button">{{ section.settings.cta_text }}</a>
         </div>
         {% endif %}
+        {% comment %}
         {% if section.settings.hidden_text != blank %}
         <div class="hidden_text">
           {{ section.settings.hidden_text }}
         </div>
         {% endif %}
+        {% endcomment %}
       </div>
     </div>
   </div>
